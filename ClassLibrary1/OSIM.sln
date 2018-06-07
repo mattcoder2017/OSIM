@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIM.Core", "ClassLibrary1\OSIM.Core.csproj", "{8A2FF520-25F7-43B0-9F22-C57BC59C9DE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIM.UnitTest", "OSIM.UnitTest\OSIM.UnitTest.csproj", "{D8B21E55-7E9B-4502-AB18-CA5C8ADAE08A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIM.IntegrationTest", "OSIM.IntegrationTest\OSIM.IntegrationTest.csproj", "{F7BE09EA-448B-43DF-A809-184F4ECC0D26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIM.ExternalServices", "ExternalServices\OSIM.ExternalServices.csproj", "{3F80B206-FD7F-4424-89C5-2849B699F123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrox.BooksRead.Web", "..\Wrox.BooksRead.Web\Wrox.BooksRead.Web.csproj", "{00E73FFD-B8FF-4252-8CD3-FB8B5F30A72B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrox.BooksRead.Web.Tests", "Wrox.BooksRead.Web.Tests\Wrox.BooksRead.Web.Tests.csproj", "{07BAB05B-2F8F-453C-BA1E-6D2D8C27961E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A2FF520-25F7-43B0-9F22-C57BC59C9DE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A2FF520-25F7-43B0-9F22-C57BC59C9DE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A2FF520-25F7-43B0-9F22-C57BC59C9DE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A2FF520-25F7-43B0-9F22-C57BC59C9DE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B21E55-7E9B-4502-AB18-CA5C8ADAE08A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B21E55-7E9B-4502-AB18-CA5C8ADAE08A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B21E55-7E9B-4502-AB18-CA5C8ADAE08A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B21E55-7E9B-4502-AB18-CA5C8ADAE08A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7BE09EA-448B-43DF-A809-184F4ECC0D26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7BE09EA-448B-43DF-A809-184F4ECC0D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7BE09EA-448B-43DF-A809-184F4ECC0D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7BE09EA-448B-43DF-A809-184F4ECC0D26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F80B206-FD7F-4424-89C5-2849B699F123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F80B206-FD7F-4424-89C5-2849B699F123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F80B206-FD7F-4424-89C5-2849B699F123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F80B206-FD7F-4424-89C5-2849B699F123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E73FFD-B8FF-4252-8CD3-FB8B5F30A72B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E73FFD-B8FF-4252-8CD3-FB8B5F30A72B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E73FFD-B8FF-4252-8CD3-FB8B5F30A72B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E73FFD-B8FF-4252-8CD3-FB8B5F30A72B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07BAB05B-2F8F-453C-BA1E-6D2D8C27961E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07BAB05B-2F8F-453C-BA1E-6D2D8C27961E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07BAB05B-2F8F-453C-BA1E-6D2D8C27961E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07BAB05B-2F8F-453C-BA1E-6D2D8C27961E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

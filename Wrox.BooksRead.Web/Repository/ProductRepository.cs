@@ -1,0 +1,112 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Data.Entity;
+using System.Web;
+using System.Web.Mvc;
+using Wrox.BooksRead.Web.Models;
+
+namespace Wrox.BooksRead.Web.Repository
+{
+    public interface IProductRepository
+    {
+        List<Product> AllProduct();
+        bool AddProduct(ProductViewModel product);
+        Product GetProductById(int? productid);
+        bool EditProduct(ProductViewModel product);
+    }
+    public class HardCodedProductRepository : IProductRepository
+    {
+        public bool AddProduct(ProductViewModel product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Product> AllProduct()
+        {
+            return new List<Product>()
+            {
+                new Product {Id=0, Name="xxx"},
+                new Product {Id=1, Name="YYY"}
+            };
+        }
+
+        Product IProductRepository.GetProductById(int? productid)
+        {
+            throw new NotImplementedException();
+        }
+        public bool EditProduct(ProductViewModel product)
+        {
+            throw new NotImplementedException();
+        }
+
+
+
+    }
+
+    public class ProductRepository : IProductRepository
+    {
+        EFConnection _context = null;
+        public ProductRepository()
+        {
+             _context = new EFConnection();
+
+        }
+
+        public bool AddProduct(ProductViewModel product)
+        {
+            try
+            {
+                Product p = new Product();
+                p.Id = product.Id;
+                p.Name = product.Name;
+                p.Category = product.CategoryId;
+                p.CreateDate = DateTime.Parse(product.CreateDate);
+
+                _context.Products.Add(p);
+                _context.SaveChanges();
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+                
+        }
+
+        public List<Product> AllProduct()
+        {
+            return _context.Products.Include(p => p.Category1).ToList<Product>();
+        }
+
+        public bool EditProduct(ProductViewModel vmproduct)
+        {
+            try
+            {
+                Product product = new Product();
+                product.Id = vmproduct.Id;
+                product.Name = vmproduct.Name;
+                product.Category = vmproduct.CategoryId;
+                product.CreateDate = DateTime.Parse(vmproduct.CreateDate);
+                _context.Entry(product).State = System.Data.Entity.EntityState.Modified;
+                _context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                // log things to logger
+            }
+            finally
+            {
+            }
+            return false;
+        }
+        public Product GetProductById(int? productid)
+        {
+            return _context.Products.Find(productid);
+        }
+    }
+
+
+}
+

@@ -1,0 +1,5 @@
+D:\VS Projects\TDD\ClassLibrary1\ExternalServices\bin\ExternalServices.dll.config
+D:\VS Projects\TDD\ClassLibrary1\ExternalServices\bin\ExternalServices.dll
+D:\VS Projects\TDD\ClassLibrary1\ExternalServices\bin\ExternalServices.pdb
+D:\VS Projects\TDD\ClassLibrary1\ExternalServices\obj\Debug\ExternalServices.dll
+D:\VS Projects\TDD\ClassLibrary1\ExternalServices\obj\Debug\ExternalServices.pdb
