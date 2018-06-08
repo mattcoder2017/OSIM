@@ -13,12 +13,12 @@ namespace Wrox.BooksRead.Web.Controllers
 {
     public class CategoriesController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private EFConnection db = new EFConnection();
 
         // GET: Categories
         public async Task<ActionResult> Index()
         {
-            return View(await db.Categorie.ToListAsync());
+            return View(await db.Categories.ToListAsync());
         }
 
         // GET: Categories/Details/5
@@ -28,7 +28,7 @@ namespace Wrox.BooksRead.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = await db.Categorie.FindAsync(id);
+            Category category = await db.Categories.FindAsync(id);
             if (category == null)
             {
                 return HttpNotFound();
@@ -51,8 +51,9 @@ namespace Wrox.BooksRead.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Categorie.Add(category);
+                db.Categories.Add(category);
                 await db.SaveChangesAsync();
+                await RedisLib.DeleteCache("Categories");
                 return RedirectToAction("Index");
             }
 
@@ -66,7 +67,7 @@ namespace Wrox.BooksRead.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = await db.Categorie.FindAsync(id);
+            Category category = await db.Categories.FindAsync(id);
             if (category == null)
             {
                 return HttpNotFound();
@@ -85,6 +86,7 @@ namespace Wrox.BooksRead.Web.Controllers
             {
                 db.Entry(category).State = EntityState.Modified;
                 await db.SaveChangesAsync();
+                await RedisLib.DeleteCache("Categories");
                 return RedirectToAction("Index");
             }
             return View(category);
@@ -97,7 +99,7 @@ namespace Wrox.BooksRead.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Category category = await db.Categorie.FindAsync(id);
+            Category category = await db.Categories.FindAsync(id);
             if (category == null)
             {
                 return HttpNotFound();
@@ -110,9 +112,10 @@ namespace Wrox.BooksRead.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Category category = await db.Categorie.FindAsync(id);
-            db.Categorie.Remove(category);
+            Category category = await db.Categories.FindAsync(id);
+            db.Categories.Remove(category);
             await db.SaveChangesAsync();
+            await RedisLib.DeleteCache("Categories");
             return RedirectToAction("Index");
         }
 

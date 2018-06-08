@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Wrox.BooksRead.Web
+namespace Wrox.BooksRead.Web.Models
 {
     using System;
     using System.Collections.Generic;

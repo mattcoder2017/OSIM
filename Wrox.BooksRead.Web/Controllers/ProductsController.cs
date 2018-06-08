@@ -12,12 +12,12 @@ namespace Wrox.BooksRead.Web.Controllers
 {
     public class ProductsController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private EFConnection db = new EFConnection();
 
         // GET: Products
         public ActionResult Index()
         {
-            var products = db.Product.Include(p => p.Category1);
+            var products = db.Products.Include(p => p.Category1);
             return View(products.ToList());
         }
 
@@ -28,7 +28,7 @@ namespace Wrox.BooksRead.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Product.Find(id);
+            Product product = db.Products.Find(id);
             if (product == null)
             {
                 return HttpNotFound();
@@ -39,7 +39,7 @@ namespace Wrox.BooksRead.Web.Controllers
         // GET: Products/Create
         public ActionResult Create()
         {
-            ViewBag.Category = new SelectList(db.Categorie, "Id", "Name");
+            ViewBag.Category = new SelectList(db.Categories, "Id", "Name");
             return View();
         }
 
@@ -52,12 +52,12 @@ namespace Wrox.BooksRead.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Product.Add(product);
+                db.Products.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Category = new SelectList(db.Categorie, "Id", "Name", product.Category);
+            ViewBag.Category = new SelectList(db.Categories, "Id", "Name", product.Category);
             return View(product);
         }
 
@@ -68,12 +68,12 @@ namespace Wrox.BooksRead.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Product.Find(id);
+            Product product = db.Products.Find(id);
             if (product == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.Category = new SelectList(db.Categorie, "Id", "Name", product.Category);
+            ViewBag.Category = new SelectList(db.Categories, "Id", "Name", product.Category);
             return View(product);
         }
 
@@ -90,7 +90,7 @@ namespace Wrox.BooksRead.Web.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.Category = new SelectList(db.Categorie, "Id", "Name", product.Category);
+            ViewBag.Category = new SelectList(db.Categories, "Id", "Name", product.Category);
             return View(product);
         }
 
@@ -101,7 +101,7 @@ namespace Wrox.BooksRead.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Product.Find(id);
+            Product product = db.Products.Find(id);
             if (product == null)
             {
                 return HttpNotFound();
@@ -114,8 +114,8 @@ namespace Wrox.BooksRead.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Product product = db.Product.Find(id);
-            db.Product.Remove(product);
+            Product product = db.Products.Find(id);
+            db.Products.Remove(product);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

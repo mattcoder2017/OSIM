@@ -39,6 +39,15 @@ namespace Wrox.BooksRead.Web.Models
             return obj;
         }
 
+        public static Task<bool>  DeleteCache(String key)
+        {
+            if (cache == null)
+            {
+                cache = RedisCacheExtension.Connection.GetDatabase();
+            }
+            return cache.KeyDeleteAsync(key);
+        }
+
 
     }
     internal class RedisCacheExtension
