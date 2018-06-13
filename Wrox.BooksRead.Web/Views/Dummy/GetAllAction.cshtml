@@ -10,7 +10,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -22,25 +22,64 @@
            @Html.DisplayNameFor(model => model.Category1.Name) 
         </th>
         <th></th>
-    </tr>
+    </tr>*@
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
+    <ul>
+        <li>
             @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.CreateDate)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Category1.Name) 
-        </td>
-        <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+            <a href="#" class="asyncClass" data-value="@item.Id">Delete</a>
+
+
+        </li>
+    </ul>
 }
 
-</table>
+@*</table>*@
+
+@section scripts
+{   <script>
+       $(document).ready(
+           $(".asyncClass").click(
+                 function (e)
+                 {
+                     var link = $(e.target);
+                     var id = link.attr("data-value");
+                     bootbox.dialog(
+                         {
+                             message: "Do you really want to remove this product??",
+                             title: "Confirmation",
+                             buttons:
+                                 {
+                                     no: {
+                                         label: "No",
+                                         className: "btn-default",
+                                         callback: function() {bootbox.hideAll();}
+                                     },
+                                     yes: {
+                                         label: "Yes",
+                                         className: "btn-danger",
+                                         callback: function() {
+                                                 $.ajax(
+                                                {
+                                                    url : "/api/Product/"+ id,
+                                                    method: "DELETE"
+                                                })
+                                                     .done(function() {
+                                                        alert("delete succesful!");
+                                                        link.parents("ul").fadeOut(function()
+                                                        { $(this).remove(); })
+                                                     })
+                                                     .fail(function (a)
+                                                       {
+                                                           alert(a);
+                                                       })
+                                            }}}}
+                  )}))
+       </script>       
+}

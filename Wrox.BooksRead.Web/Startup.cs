@@ -10,6 +10,7 @@ using System.Reflection;
 using System.Linq;
 using Unity.RegistrationByConvention;
 using Unity.Injection;
+using System.Web.Http;
 
 [assembly: OwinStartupAttribute(typeof(Wrox.BooksRead.Web.Startup))]
 namespace Wrox.BooksRead.Web
@@ -20,6 +21,8 @@ namespace Wrox.BooksRead.Web
         {
             var unity = CreateUnityContainer();
             DependencyResolver.SetResolver(new UnityDependencyResolver(unity));
+          //  GlobalConfiguration.Configuration.DependencyResolver = new Unity.UnityDependencyResolver(unity);
+
             ConfigureAuth(app);
         }
 

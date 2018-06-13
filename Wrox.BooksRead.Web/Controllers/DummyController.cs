@@ -6,6 +6,7 @@ using Wrox.BooksRead.Web.Repository;
 
 namespace Wrox.BooksRead.Web.Controllers
 {
+    [Authorize]
     public class DummyController : Controller
     {
         private IProductRepository ProductRepository;
@@ -34,6 +35,7 @@ namespace Wrox.BooksRead.Web.Controllers
             return View();
         }
 
+        
         public ActionResult GetAllAction()
         {
             var Data = this.ProductRepository.AllProduct();

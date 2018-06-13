@@ -14,6 +14,7 @@ namespace Wrox.BooksRead.Web.Repository
         bool AddProduct(ProductViewModel product);
         Product GetProductById(int? productid);
         bool EditProduct(ProductViewModel product);
+        void Delete(int id);
     }
     public class HardCodedProductRepository : IProductRepository
     {
@@ -40,6 +41,10 @@ namespace Wrox.BooksRead.Web.Repository
             throw new NotImplementedException();
         }
 
+        public void Delete(int Id)
+        {
+            throw new NotImplementedException();
+        }
 
 
     }
@@ -104,6 +109,13 @@ namespace Wrox.BooksRead.Web.Repository
         public Product GetProductById(int? productid)
         {
             return _context.Products.Find(productid);
+        }
+
+        public void Delete(int Id)
+        {
+            Product p = _context.Products.Single<Product>(a => a.Id == Id);
+            _context.Products.Remove(p);
+            _context.SaveChanges();
         }
     }
 
