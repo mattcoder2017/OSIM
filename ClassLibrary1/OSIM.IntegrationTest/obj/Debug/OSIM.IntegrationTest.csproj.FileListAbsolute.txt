@@ -13,3 +13,19 @@ D:\VS Projects\TDD\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Moq.pdb
 D:\VS Projects\TDD\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Moq.xml
 D:\VS Projects\TDD\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\VS Projects\TDD\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\System.ValueTuple.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\OSIM.IntegrationTest.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\OSIM.IntegrationTest.pdb
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Castle.Core.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Moq.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\System.ValueTuple.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Castle.Core.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Moq.pdb
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Moq.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\System.ValueTuple.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\obj\Debug\OSIM.IntegrationTest.csprojResolveAssemblyReference.cache
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\obj\Debug\OSIM.IntegrationTest.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\obj\Debug\OSIM.IntegrationTest.pdb

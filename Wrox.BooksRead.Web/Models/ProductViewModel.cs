@@ -18,6 +18,8 @@ namespace Wrox.BooksRead.Web.Models
             CreateDate = product.CreateDate.Date.ToString();
             CreatTime = product.CreateDate.TimeOfDay.ToString();
             Category1 = product.Category1;
+                Price = product.Price;
+                Stock = product.Stock;
             }
             Categories = categories;
          }
@@ -40,5 +42,7 @@ namespace Wrox.BooksRead.Web.Models
         
 
         public IEnumerable<Category> Categories { get; set; }
+        public int? Price { get; private set; }
+        public int? Stock { get; private set; }
     }
 }

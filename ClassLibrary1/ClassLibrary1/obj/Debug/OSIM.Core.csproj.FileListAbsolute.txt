@@ -2,3 +2,8 @@ D:\VS Projects\TDD\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
 D:\VS Projects\TDD\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
 D:\VS Projects\TDD\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 D:\VS Projects\TDD\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\ClassLibrary1\obj\Debug\OSIM.Core.csprojResolveAssemblyReference.cache
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

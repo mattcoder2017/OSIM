@@ -13,7 +13,7 @@ namespace Wrox.BooksRead.Web.Controllers
 {
     public class CategoriesController : Controller
     {
-        private EFConnection db = new EFConnection();
+        private EFDBEntities db = new EFDBEntities();
 
         // GET: Categories
         public async Task<ActionResult> Index()
@@ -67,6 +67,7 @@ namespace Wrox.BooksRead.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            //await RedisLib.DeleteCache("Categories");
             Category category = await db.Categories.FindAsync(id);
             if (category == null)
             {

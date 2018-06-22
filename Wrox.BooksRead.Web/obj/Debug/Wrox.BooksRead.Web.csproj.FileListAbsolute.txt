@@ -170,7 +170,6 @@ D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Microsoft.Owin.Security.
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Microsoft.Owin.Security.Google.xml
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Microsoft.Owin.Security.Twitter.xml
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\obj\Debug\Wrox.BooksRead.Web.csprojResolveAssemblyReference.cache
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\obj\Debug\Wrox.BooksRead.Web.dll
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\obj\Debug\Wrox.BooksRead.Web.pdb
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\System.Net.Http.Formatting.dll
@@ -181,3 +180,4 @@ D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\System.Web.Http.xml
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\System.Web.Http.WebHost.xml
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Unity.AspNet.WebApi.dll
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Unity.AspNet.WebApi.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\obj\Debug\Wrox.BooksRead.Web.csprojResolveAssemblyReference.cache

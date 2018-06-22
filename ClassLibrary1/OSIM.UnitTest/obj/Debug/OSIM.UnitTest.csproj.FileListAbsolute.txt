@@ -16,3 +16,22 @@ D:\VS Projects\TDD\ClassLibrary1\OSIM.UnitTest\bin\Debug\Moq.pdb
 D:\VS Projects\TDD\ClassLibrary1\OSIM.UnitTest\bin\Debug\Moq.xml
 D:\VS Projects\TDD\ClassLibrary1\OSIM.UnitTest\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\VS Projects\TDD\ClassLibrary1\OSIM.UnitTest\bin\Debug\System.ValueTuple.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\OSIM.UnitTest.dll.config
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\OSIM.UnitTest.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\OSIM.UnitTest.pdb
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\Castle.Core.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\EntityFramework.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\EntityFramework.SqlServer.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\Moq.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\System.ValueTuple.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\Castle.Core.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\EntityFramework.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\EntityFramework.SqlServer.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\Moq.pdb
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\Moq.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\System.ValueTuple.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\obj\Debug\OSIM.UnitTest.csprojResolveAssemblyReference.cache
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\obj\Debug\OSIM.UnitTest.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\obj\Debug\OSIM.UnitTest.pdb

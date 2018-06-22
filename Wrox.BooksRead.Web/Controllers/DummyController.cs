@@ -59,6 +59,7 @@ namespace Wrox.BooksRead.Web.Controllers
                 else
                     return View("Create", product);
             }
+            //RedisLib.DeleteCache("");
             product.Categories = RedisLib.GetCache<IEnumerable<Category>>("Categories", () => { return CategoryRepository.AllCategories(); });// CategoryRepository.AllCategories();
             return View("GetAllAction");
         }
@@ -79,7 +80,8 @@ namespace Wrox.BooksRead.Web.Controllers
 
         public ActionResult Edit(int? Id)
         {
-            Product product = ProductRepository.GetProductById(Id);
+            //Product product = ProductRepository.GetProductById(Id);
+            Product product = new Product().CreateProduct(Id);
             //ProductViewModel viewModel = new ProductViewModel(product, CategoryRepository.AllCategories());
             ProductViewModel viewModel = new ProductViewModel(product, RedisLib.GetCache<IEnumerable<Category>>("Categories", () => { return CategoryRepository.AllCategories(); }));
             return View(viewModel);

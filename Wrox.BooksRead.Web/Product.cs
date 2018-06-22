@@ -9,16 +9,71 @@
 
 namespace Wrox.BooksRead.Web.Models
 {
+    using Repository;
     using System;
     using System.Collections.Generic;
-    [Serializable]
+    using System.Web.Mvc;
+
     public partial class Product
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Product()
+        {
+            this.ProductNotifications = new HashSet<ProductNotification>();
+            this.ProductSubscriptions = new HashSet<ProductSubscription>();
+        }
+        public static Product Instance()
+        {
+            return new Product();
+        }
+        public Product CreateProduct(int? productId)
+        {
+            //ProductRepo = Resolver.Container.Resolve<IProductRepository>();
+            return ProductRepo.GetProductById(productId);
+        }
+
+        public IProductRepository ProductRepo
+        {
+            get
+            {
+                if (productrepo != null)
+                {
+                    return productrepo;
+                }
+                return DependencyResolver.Current.GetService<IProductRepository>();
+
+            }
+            set { productrepo = value; }
+        }
+
+        private IProductRepository productrepo;
         public int Id { get; set; }
         public string Name { get; set; }
         public int Category { get; set; }
         public System.DateTime CreateDate { get; set; }
+        public Nullable<int> Stock { get; set; }
+        public Nullable<int> Price { get; set; }
     
         public virtual Category Category1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductNotification> ProductNotifications { get; set; }
+
+        public void Update(ProductViewModel priceChangeProduct)
+        {
+            Product OriginalProduct = CreateProduct(priceChangeProduct.Id);
+            if (OriginalProduct == null)
+            {
+                throw new NullReferenceException("Product with ID " + priceChangeProduct.Id + "does not existed in the system.");
+            }
+            ProductRepo.EditProduct(priceChangeProduct);
+            if (priceChangeProduct.Price != OriginalProduct.Price)
+            {
+                NotificationRepo.buildPriceChangeNotification(OriginalProduct, priceChangeProduct);
+            }
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductSubscription> ProductSubscriptions { get; set; }
+        public INotificationRepository NotificationRepo { get; set; }
     }
 }

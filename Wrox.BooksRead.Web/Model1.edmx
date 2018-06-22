@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Wrox.BookRead.Web.Models.Stores" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Category" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="Stock" Type="int" />
+          <Property Name="Price" Type="int" />
+        </EntityType>
+        <EntityType Name="ProductNotification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Notification" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'EFDB.dbo.ProductSubscription' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ProductSubscription">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'EFDB.dbo.UserProductNotifiation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="UserProductNotifiation">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="ProductNotificationId" />
+            <PropertyRef Name="IsRead" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProductNotificationId" Type="int" Nullable="false" />
+          <Property Name="IsRead" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserProductNotification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductNotificationId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="IsRead" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Product_Category">
+          <End Role="Category" Type="Self.Category" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductNotification_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="ProductNotification" Type="Self.ProductNotification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductNotification">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSubscription_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="ProductSubscription" Type="Self.ProductSubscription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSubscription">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSubscription_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="ProductSubscription" Type="Self.ProductSubscription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSubscription">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProductNotifiation_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="UserProductNotifiation" Type="Self.UserProductNotifiation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserProductNotifiation">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProductNotifiation_ProductNotification">
+          <End Role="ProductNotification" Type="Self.ProductNotification" Multiplicity="1" />
+          <End Role="UserProductNotifiation" Type="Self.UserProductNotifiation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductNotification">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserProductNotifiation">
+              <PropertyRef Name="ProductNotificationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProductNotification_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="UserProductNotification" Type="Self.UserProductNotification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserProductNotification">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProductNotification_UserProductNotification">
+          <End Role="ProductNotification" Type="Self.ProductNotification" Multiplicity="1" />
+          <End Role="UserProductNotification" Type="Self.UserProductNotification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductNotification">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserProductNotification">
+              <PropertyRef Name="ProductNotificationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WroxBookReadWebModelsStoresContainer">
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductNotification" EntityType="Self.ProductNotification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserProductNotification" EntityType="Self.UserProductNotification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductSubscription" EntityType="Self.ProductSubscription" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ProductSubscription].[Id] AS [Id], 
+    [ProductSubscription].[UserId] AS [UserId], 
+    [ProductSubscription].[ProductId] AS [ProductId]
+    FROM [dbo].[ProductSubscription] AS [ProductSubscription]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UserProductNotifiation" EntityType="Self.UserProductNotifiation" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [UserProductNotifiation].[Id] AS [Id], 
+    [UserProductNotifiation].[UserId] AS [UserId], 
+    [UserProductNotifiation].[ProductNotificationId] AS [ProductNotificationId], 
+    [UserProductNotifiation].[IsRead] AS [IsRead]
+    FROM [dbo].[UserProductNotifiation] AS [UserProductNotifiation]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Product_Category" Association="Self.FK_Product_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductNotification_Product" Association="Self.FK_ProductNotification_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductNotification" EntitySet="ProductNotification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSubscription_AspNetUsers" Association="Self.FK_ProductSubscription_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="ProductSubscription" EntitySet="ProductSubscription" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSubscription_Product" Association="Self.FK_ProductSubscription_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductSubscription" EntitySet="ProductSubscription" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProductNotifiation_AspNetUsers" Association="Self.FK_UserProductNotifiation_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="UserProductNotifiation" EntitySet="UserProductNotifiation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProductNotifiation_ProductNotification" Association="Self.FK_UserProductNotifiation_ProductNotification">
+            <End Role="ProductNotification" EntitySet="ProductNotification" />
+            <End Role="UserProductNotifiation" EntitySet="UserProductNotifiation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProductNotification_AspNetUsers" Association="Self.FK_UserProductNotification_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="UserProductNotification" EntitySet="UserProductNotification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProductNotification_UserProductNotification" Association="Self.FK_UserProductNotification_UserProductNotification">
+            <End Role="ProductNotification" EntitySet="ProductNotification" />
+            <End Role="UserProductNotification" EntitySet="UserProductNotification" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Wrox.BookRead.Web.Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ProductSubscriptions" Relationship="Self.FK_ProductSubscription_AspNetUsers" FromRole="AspNetUsers" ToRole="ProductSubscription" />
+          <NavigationProperty Name="UserProductNotifiations" Relationship="Self.FK_UserProductNotifiation_AspNetUsers" FromRole="AspNetUsers" ToRole="UserProductNotifiation" />
+          <NavigationProperty Name="UserProductNotifications" Relationship="Self.FK_UserProductNotification_AspNetUsers" FromRole="AspNetUsers" ToRole="UserProductNotification" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_Product_Category" FromRole="Category" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Category" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Stock" Type="Int32" />
+          <NavigationProperty Name="Category1" Relationship="Self.FK_Product_Category" FromRole="Product" ToRole="Category" />
+          <NavigationProperty Name="ProductNotifications" Relationship="Self.FK_ProductNotification_Product" FromRole="Product" ToRole="ProductNotification" />
+          <NavigationProperty Name="ProductSubscriptions" Relationship="Self.FK_ProductSubscription_Product" FromRole="Product" ToRole="ProductSubscription" />
+          <Property Name="Price" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ProductNotification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Notification" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_ProductNotification_Product" FromRole="ProductNotification" ToRole="Product" />
+          <NavigationProperty Name="UserProductNotifiations" Relationship="Self.FK_UserProductNotifiation_ProductNotification" FromRole="ProductNotification" ToRole="UserProductNotifiation" />
+          <NavigationProperty Name="UserProductNotifications" Relationship="Self.FK_UserProductNotification_UserProductNotification" FromRole="ProductNotification" ToRole="UserProductNotification" />
+        </EntityType>
+        <EntityType Name="UserProductNotification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductNotificationId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsRead" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_UserProductNotification_AspNetUsers" FromRole="UserProductNotification" ToRole="AspNetUsers" />
+          <NavigationProperty Name="ProductNotification" Relationship="Self.FK_UserProductNotification_UserProductNotification" FromRole="UserProductNotification" ToRole="ProductNotification" />
+        </EntityType>
+        <EntityType Name="ProductSubscription">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_ProductSubscription_AspNetUsers" FromRole="ProductSubscription" ToRole="AspNetUsers" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_ProductSubscription_Product" FromRole="ProductSubscription" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="UserProductNotifiation">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="ProductNotificationId" />
+            <PropertyRef Name="IsRead" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductNotificationId" Type="Int32" Nullable="false" />
+          <Property Name="IsRead" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_UserProductNotifiation_AspNetUsers" FromRole="UserProductNotifiation" ToRole="AspNetUsers" />
+          <NavigationProperty Name="ProductNotification" Relationship="Self.FK_UserProductNotifiation_ProductNotification" FromRole="UserProductNotifiation" ToRole="ProductNotification" />
+        </EntityType>
+        <Association Name="FK_ProductSubscription_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1" />
+          <End Role="ProductSubscription" Type="Self.ProductSubscription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSubscription">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProductNotifiation_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1" />
+          <End Role="UserProductNotifiation" Type="Self.UserProductNotifiation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserProductNotifiation">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProductNotification_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1" />
+          <End Role="UserProductNotification" Type="Self.UserProductNotification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserProductNotification">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Category">
+          <End Role="Category" Type="Self.Category" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductNotification_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="ProductNotification" Type="Self.ProductNotification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductNotification">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSubscription_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="ProductSubscription" Type="Self.ProductSubscription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSubscription">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProductNotifiation_ProductNotification">
+          <End Role="ProductNotification" Type="Self.ProductNotification" Multiplicity="1" />
+          <End Role="UserProductNotifiation" Type="Self.UserProductNotifiation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductNotification">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserProductNotifiation">
+              <PropertyRef Name="ProductNotificationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProductNotification_UserProductNotification">
+          <End Role="ProductNotification" Type="Self.ProductNotification" Multiplicity="1" />
+          <End Role="UserProductNotification" Type="Self.UserProductNotification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductNotification">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserProductNotification">
+              <PropertyRef Name="ProductNotificationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EFDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+          <EntitySet Name="Categories" EntityType="Self.Category" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="ProductNotifications" EntityType="Self.ProductNotification" />
+          <EntitySet Name="UserProductNotifications" EntityType="Self.UserProductNotification" />
+          <EntitySet Name="ProductSubscriptions" EntityType="Self.ProductSubscription" />
+          <EntitySet Name="UserProductNotifiations" EntityType="Self.UserProductNotifiation" />
+          <AssociationSet Name="FK_ProductSubscription_AspNetUsers" Association="Self.FK_ProductSubscription_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="ProductSubscription" EntitySet="ProductSubscriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProductNotifiation_AspNetUsers" Association="Self.FK_UserProductNotifiation_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="UserProductNotifiation" EntitySet="UserProductNotifiations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProductNotification_AspNetUsers" Association="Self.FK_UserProductNotification_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="UserProductNotification" EntitySet="UserProductNotifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Category" Association="Self.FK_Product_Category">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductNotification_Product" Association="Self.FK_ProductNotification_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductNotification" EntitySet="ProductNotifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSubscription_Product" Association="Self.FK_ProductSubscription_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductSubscription" EntitySet="ProductSubscriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProductNotifiation_ProductNotification" Association="Self.FK_UserProductNotifiation_ProductNotification">
+            <End Role="ProductNotification" EntitySet="ProductNotifications" />
+            <End Role="UserProductNotifiation" EntitySet="UserProductNotifiations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProductNotification_UserProductNotification" Association="Self.FK_UserProductNotification_UserProductNotification">
+            <End Role="ProductNotification" EntitySet="ProductNotifications" />
+            <End Role="UserProductNotification" EntitySet="UserProductNotifications" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WroxBookReadWebModelsStoresContainer" CdmEntityContainer="EFDBEntities">
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="Wrox.BookRead.Web.Models.AspNetUser">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="Wrox.BookRead.Web.Models.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="Wrox.BookRead.Web.Models.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductNotifications">
+            <EntityTypeMapping TypeName="Wrox.BookRead.Web.Models.ProductNotification">
+              <MappingFragment StoreEntitySet="ProductNotification">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Notification" ColumnName="Notification" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserProductNotifications">
+            <EntityTypeMapping TypeName="Wrox.BookRead.Web.Models.UserProductNotification">
+              <MappingFragment StoreEntitySet="UserProductNotification">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ProductNotificationId" ColumnName="ProductNotificationId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductSubscriptions">
+            <EntityTypeMapping TypeName="Wrox.BookRead.Web.Models.ProductSubscription">
+              <MappingFragment StoreEntitySet="ProductSubscription">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserProductNotifiations">
+            <EntityTypeMapping TypeName="Wrox.BookRead.Web.Models.UserProductNotifiation">
+              <MappingFragment StoreEntitySet="UserProductNotifiation">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ProductNotificationId" ColumnName="ProductNotificationId" />
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

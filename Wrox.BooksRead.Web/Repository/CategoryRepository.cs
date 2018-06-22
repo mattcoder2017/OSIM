@@ -12,10 +12,10 @@ namespace Wrox.BooksRead.Web.Repository
     }
     public class CategoryRepository : ICategoryRepository
     {
-        EFConnection _context;
+        EFDBEntities _context;
         public CategoryRepository()
         {
-            _context = new EFConnection();
+            _context = new EFDBEntities();
         }
         public IEnumerable<Category> AllCategories()
         {

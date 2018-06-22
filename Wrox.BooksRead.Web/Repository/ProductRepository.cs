@@ -51,10 +51,10 @@ namespace Wrox.BooksRead.Web.Repository
 
     public class ProductRepository : IProductRepository
     {
-        EFConnection _context = null;
+        EFDBEntities _context = null;
         public ProductRepository()
         {
-             _context = new EFConnection();
+             _context = new EFDBEntities();
 
         }
 

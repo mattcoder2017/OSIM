@@ -12,7 +12,7 @@ namespace Wrox.BooksRead.Web.Controllers
 {
     public class ProductsController : Controller
     {
-        private EFConnection db = new EFConnection();
+        private EFDBEntities db = new EFDBEntities();
 
         // GET: Products
         public ActionResult Index()

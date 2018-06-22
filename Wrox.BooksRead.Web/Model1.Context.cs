@@ -13,10 +13,10 @@ namespace Wrox.BooksRead.Web.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EFConnection : DbContext
+    public partial class EFDBEntities : DbContext
     {
-        public EFConnection()
-            : base("name=EFConnection")
+        public EFDBEntities()
+            : base("name=EFDBEntities")
         {
         }
     
@@ -25,7 +25,12 @@ namespace Wrox.BooksRead.Web.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ProductNotification> ProductNotifications { get; set; }
+        public virtual DbSet<UserProductNotification> UserProductNotifications { get; set; }
+        public virtual DbSet<ProductSubscription> ProductSubscriptions { get; set; }
+        public virtual DbSet<UserProductNotifiation> UserProductNotifiations { get; set; }
     }
 }
