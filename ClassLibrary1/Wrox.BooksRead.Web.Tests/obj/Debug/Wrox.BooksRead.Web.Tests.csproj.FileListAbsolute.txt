@@ -146,3 +146,9 @@ D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debu
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\Unity.Mvc.xml
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\System.Net.Http.Formatting.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\FluentAssertions.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\nunit.framework.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\FluentAssertions.pdb
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\FluentAssertions.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\nunit.framework.pdb
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\nunit.framework.xml

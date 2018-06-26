@@ -12,6 +12,7 @@ using Unity.RegistrationByConvention;
 using Unity.Injection;
 using System.Web.Http;
 using Wrox.BooksRead.Web.Models;
+using Wrox.BooksRead.Web.Persistence;
 
 [assembly: OwinStartupAttribute(typeof(Wrox.BooksRead.Web.Startup))]
 namespace Wrox.BooksRead.Web
@@ -30,14 +31,14 @@ namespace Wrox.BooksRead.Web
         private IUnityContainer CreateUnityContainer()
         {
             UnityContainer container = new UnityContainer();
-
+            container.RegisterType<IUnitOfWork, UnitOfWork>();
             container.RegisterType<ICategoryRepository, CategoryRepository>();
             container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<AccountController>(new InjectionConstructor());
             container.RegisterType<ManageController>(new InjectionConstructor());
 
             //var ProductRepo = new ProductRepository();
-            container.RegisterType<Product>(new InjectionProperty("ProductRepo"));
+            container.RegisterType<Product>(new  InjectionProperty("ProductRepo"));
 
             //container.RegisterType<IController, DummyController>("dummy");
             //container.RegisterType<IController, AccountController>("account");

@@ -60,20 +60,26 @@ namespace Wrox.BooksRead.Web.Models
 
         public void Update(ProductViewModel priceChangeProduct)
         {
-            Product OriginalProduct = CreateProduct(priceChangeProduct.Id);
-            if (OriginalProduct == null)
+           
+            if (this.Price != priceChangeProduct.Price)
             {
-                throw new NullReferenceException("Product with ID " + priceChangeProduct.Id + "does not existed in the system.");
-            }
-            ProductRepo.EditProduct(priceChangeProduct);
-            if (priceChangeProduct.Price != OriginalProduct.Price)
-            {
-                NotificationRepo.buildPriceChangeNotification(OriginalProduct, priceChangeProduct);
+                this.PriceIsChanged = true;
+                var productNotification = new ProductNotification();
+                productNotification.Notification =
+                    string.Format(Common.Utility.PRODUCT_PRICE_CHANGE_NOTIFICATION,
+                    new object[] {
+                        this.Id.ToString(),
+                        this.Name,
+                        this.Price.ToString(),
+                        priceChangeProduct.Price.ToString() });
+
+                this.ProductNotifications.Add(productNotification);
             }
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductSubscription> ProductSubscriptions { get; set; }
         public INotificationRepository NotificationRepo { get; set; }
+        public bool PriceIsChanged { get; private set; }
     }
 }

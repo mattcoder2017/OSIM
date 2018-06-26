@@ -15,8 +15,14 @@ namespace Wrox.BooksRead.Web.Repository
         EFDBEntities _context;
         public CategoryRepository()
         {
-            _context = new EFDBEntities();
+           // _context = new EFDBEntities();
         }
+
+        public CategoryRepository(EFDBEntities _context)
+        {
+            this._context = _context;
+        }
+
         public IEnumerable<Category> AllCategories()
         {
             return _context.Categories.ToList<Category>();

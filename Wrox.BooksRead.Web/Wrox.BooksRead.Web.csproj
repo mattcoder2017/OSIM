@@ -232,6 +232,7 @@
     <Compile Include="Category.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Common\Utility.cs" />
     <Compile Include="Controllers\Api\ProductController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -272,6 +273,7 @@
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Models\RedisCacheExtension.cs" />
+    <Compile Include="Persistence\IUnitOfWork.cs" />
     <Compile Include="Product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

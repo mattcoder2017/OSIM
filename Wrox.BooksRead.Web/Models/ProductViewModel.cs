@@ -42,7 +42,7 @@ namespace Wrox.BooksRead.Web.Models
         
 
         public IEnumerable<Category> Categories { get; set; }
-        public int? Price { get; private set; }
-        public int? Stock { get; private set; }
+        public int? Price { get;  set; }
+        public int? Stock { get;  set; }
     }
 }

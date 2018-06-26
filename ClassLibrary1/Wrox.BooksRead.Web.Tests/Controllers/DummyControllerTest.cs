@@ -24,7 +24,7 @@ namespace Wrox.BooksRead.Web.Tests.Controllers
                       new Product { Id=1, Name="Product CN" }
                    }
                 );
-            DummyController Controller = new DummyController(MoqProductRepository.Object, null);
+            DummyController Controller = new DummyController(MoqProductRepository.Object, null, null);
 
             //Act
             ViewResult VR = Controller.GetAllAction() as ViewResult;

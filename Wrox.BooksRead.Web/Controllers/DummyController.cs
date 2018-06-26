@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using Wrox.BooksRead.Web.Models;
+using Wrox.BooksRead.Web.Persistence;
 using Wrox.BooksRead.Web.Repository;
 
 namespace Wrox.BooksRead.Web.Controllers
@@ -11,23 +12,20 @@ namespace Wrox.BooksRead.Web.Controllers
     {
         private IProductRepository ProductRepository;
         private ICategoryRepository CategoryRepository;
+        private IUnitOfWork unitOfWork;
 
         
-        public DummyController(IProductRepository moqProductRepository, ICategoryRepository cateRepo)
+        public DummyController(IProductRepository moqProductRepository, ICategoryRepository cateRepo, IUnitOfWork UnitOfWork)
         {
             this.ProductRepository = moqProductRepository;
             this.CategoryRepository = cateRepo;
+            this.unitOfWork = UnitOfWork;
         }
 
         public DummyController()
         {
         }
-        //public DummyController()
-        //{
-        //    //this.ProductRepository = new HardCodedProductRepository();
-        //    this.ProductRepository = new ProductRepository();
-        //    this.CategoryRepository = new CategoryRepository();
-        //}
+       
 
         // GET: Dummy
         public ActionResult Dumb()
@@ -59,31 +57,31 @@ namespace Wrox.BooksRead.Web.Controllers
                 else
                     return View("Create", product);
             }
-            //RedisLib.DeleteCache("");
-            product.Categories = RedisLib.GetCache<IEnumerable<Category>>("Categories", () => { return CategoryRepository.AllCategories(); });// CategoryRepository.AllCategories();
+            
+            product.Categories = RedisLib.GetCache<IEnumerable<Category>>("Categories", () => { return CategoryRepository.AllCategories(); });
+            // CategoryRepository.AllCategories();
             return View("GetAllAction");
         }
 
         [HttpPost]
         public ActionResult EditProductToDB(ProductViewModel product)
         {
-            if (ModelState.IsValid)
+             if (ModelState.IsValid)
             {
-                if (ProductRepository.EditProduct(product))
-                    return RedirectToAction("GetAllAction", "Dummy");
-                else
-                    return View("Edit", product);
+                Product originalproduct = unitOfWork.ProductRepo.GetProductById(product.Id);
+                originalproduct.Update(product);
+                unitOfWork.Complete();
+               
+                return RedirectToAction("GetAllAction", "Dummy");
+              
             }
-            //product.Categories = RedisLib.GetCache<IEnumerable<Category>>("Categories", () => { return CategoryRepository.AllCategories(); });// CategoryRepository.AllCategories();
             return RedirectToAction("GetAllAction", "Dummy");
         }
 
         public ActionResult Edit(int? Id)
         {
-            //Product product = ProductRepository.GetProductById(Id);
-            Product product = new Product().CreateProduct(Id);
-            //ProductViewModel viewModel = new ProductViewModel(product, CategoryRepository.AllCategories());
-            ProductViewModel viewModel = new ProductViewModel(product, RedisLib.GetCache<IEnumerable<Category>>("Categories", () => { return CategoryRepository.AllCategories(); }));
+            Product product = unitOfWork.ProductRepo.GetProductById(Id); 
+            ProductViewModel viewModel = new ProductViewModel(product, CategoryRepository.AllCategories());
             return View(viewModel);
         }
     }

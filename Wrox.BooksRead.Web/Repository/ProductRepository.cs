@@ -54,8 +54,13 @@ namespace Wrox.BooksRead.Web.Repository
         EFDBEntities _context = null;
         public ProductRepository()
         {
-             _context = new EFDBEntities();
+            // _context = new EFDBEntities();
 
+        }
+
+        public ProductRepository(EFDBEntities _context)
+        {
+            this._context = _context;
         }
 
         public bool AddProduct(ProductViewModel product)
@@ -108,7 +113,10 @@ namespace Wrox.BooksRead.Web.Repository
         }
         public Product GetProductById(int? productid)
         {
-            return _context.Products.Find(productid);
+            return _context.Products
+                .Include(i=>i.ProductNotifications)
+                .Include(i=>i.ProductSubscriptions)
+                .Where(i=>i.Id == productid).ToList<Product>()[0];
         }
 
         public void Delete(int Id)
