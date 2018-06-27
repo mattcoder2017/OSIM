@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using Wrox.BooksRead.Web.Repository;
 using Wrox.BooksRead.Web.Models;
 using System.Web.Mvc;
+using Wrox.BooksRead.Web.Persistence;
+using FluentAssertions;
 
 namespace Wrox.BooksRead.Web.Tests.Controllers
 {
@@ -34,6 +36,17 @@ namespace Wrox.BooksRead.Web.Tests.Controllers
             Assert.IsTrue(Model.Count == 2, "Expected Product Count is 2 ; Actual is" + Model.Count);
             Assert.IsTrue(Model[0].Name == "Product HK", "Expected 1st Product Name is Product HK ; Actual is " + Model[0].Name);
        }
+
+        [TestMethod]
+       public void Edit_WhenProductDoesNotExist_ReturnNotFound()
+        {
+            Product obj = null;
+            var unitOfWork = new Mock<IUnitOfWork>();
+            unitOfWork.Setup(i => i.ProductRepo.GetProductById(It.IsAny<int>())).Returns(obj);
+
+            var controller = new DummyController(null, null, unitOfWork.Object);
+            controller.Edit(1).Should().BeOfType(typeof(HttpNotFoundResult));
+        }
     }
 
     

@@ -116,7 +116,7 @@ namespace Wrox.BooksRead.Web.Repository
             return _context.Products
                 .Include(i=>i.ProductNotifications)
                 .Include(i=>i.ProductSubscriptions)
-                .Where(i=>i.Id == productid).ToList<Product>()[0];
+                .Where(i=>i.Id == productid).FirstOrDefault<Product>();
         }
 
         public void Delete(int Id)
