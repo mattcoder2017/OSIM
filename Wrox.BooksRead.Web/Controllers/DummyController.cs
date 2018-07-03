@@ -34,9 +34,9 @@ namespace Wrox.BooksRead.Web.Controllers
         }
 
         
-        public ActionResult GetAllAction()
+        public ViewResult GetAllAction()
         {
-            var Data = this.ProductRepository.AllProduct();
+            var Data = this.unitOfWork.ProductRepo.AllProduct();
             return View(Data);
         }
 
@@ -47,7 +47,10 @@ namespace Wrox.BooksRead.Web.Controllers
             if (ModelState.IsValid)
             {
                 if (ProductRepository.AddProduct(product))
+                {
+                    unitOfWork.Complete();
                     return RedirectToAction("Index", "Home");
+                }
                 else
                     return View("Create", product);
             }

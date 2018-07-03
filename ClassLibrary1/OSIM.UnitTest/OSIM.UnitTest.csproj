@@ -103,6 +103,7 @@
     <Compile Include="OSIM.Core\And_Saving_A_Valid_ItemType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OSIM.Core\When_Work_With_ItemType_Repo.cs" />
+    <Compile Include="Repository\ProductRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="NewFolder2\" />
@@ -133,6 +134,12 @@
       <DependentUpon>DomainModel.edmx</DependentUpon>
       <LastGenOutput>DomainModel.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Wrox.BooksRead.Web\Wrox.BooksRead.Web.csproj">
+      <Project>{00E73FFD-B8FF-4252-8CD3-FB8B5F30A72B}</Project>
+      <Name>Wrox.BooksRead.Web</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

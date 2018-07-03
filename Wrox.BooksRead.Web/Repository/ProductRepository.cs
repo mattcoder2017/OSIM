@@ -10,7 +10,7 @@ namespace Wrox.BooksRead.Web.Repository
 {
     public interface IProductRepository
     {
-        List<Product> AllProduct();
+        IEnumerable<Product> AllProduct();
         bool AddProduct(ProductViewModel product);
         Product GetProductById(int? productid);
         bool EditProduct(ProductViewModel product);
@@ -23,7 +23,7 @@ namespace Wrox.BooksRead.Web.Repository
             throw new NotImplementedException();
         }
 
-        public List<Product> AllProduct()
+        public IEnumerable<Product> AllProduct()
         {
             return new List<Product>()
             {
@@ -51,14 +51,14 @@ namespace Wrox.BooksRead.Web.Repository
 
     public class ProductRepository : IProductRepository
     {
-        EFDBEntities _context = null;
+        IEFDBEntities _context = null;
         public ProductRepository()
         {
             // _context = new EFDBEntities();
 
         }
 
-        public ProductRepository(EFDBEntities _context)
+        public ProductRepository(IEFDBEntities _context)
         {
             this._context = _context;
         }
@@ -74,7 +74,7 @@ namespace Wrox.BooksRead.Web.Repository
                 p.CreateDate = DateTime.Parse(product.CreateDate);
 
                 _context.Products.Add(p);
-                _context.SaveChanges();
+               // _context.SaveChanges();
             }
             catch
             {
@@ -84,9 +84,9 @@ namespace Wrox.BooksRead.Web.Repository
                 
         }
 
-        public List<Product> AllProduct()
+        public IEnumerable<Product> AllProduct()
         {
-            return _context.Products.Include(p => p.Category1).ToList<Product>();
+            return _context.Products.Where(p=>p.CreateDate > DateTime.Today).Include(p => p.Category1).ToList<Product>();
         }
 
         public bool EditProduct(ProductViewModel vmproduct)
@@ -98,8 +98,8 @@ namespace Wrox.BooksRead.Web.Repository
                 product.Name = vmproduct.Name;
                 product.Category = vmproduct.CategoryId;
                 product.CreateDate = DateTime.Parse(vmproduct.CreateDate);
-                _context.Entry(product).State = System.Data.Entity.EntityState.Modified;
-                _context.SaveChanges();
+                //_context.Entry(product).State = System.Data.Entity.EntityState.Modified;
+                //_context.SaveChanges();
                 return true;
             }
             catch
@@ -114,16 +114,17 @@ namespace Wrox.BooksRead.Web.Repository
         public Product GetProductById(int? productid)
         {
             return _context.Products
-                .Include(i=>i.ProductNotifications)
-                .Include(i=>i.ProductSubscriptions)
-                .Where(i=>i.Id == productid).FirstOrDefault<Product>();
+                 .Where(i => i.Id == productid)
+                 .Include(i => i.ProductNotifications)
+                 .Include(i => i.ProductSubscriptions).FirstOrDefault<Product>();
+
         }
 
         public void Delete(int Id)
         {
             Product p = _context.Products.Single<Product>(a => a.Id == Id);
             _context.Products.Remove(p);
-            _context.SaveChanges();
+            //_context.SaveChanges();
         }
     }
 

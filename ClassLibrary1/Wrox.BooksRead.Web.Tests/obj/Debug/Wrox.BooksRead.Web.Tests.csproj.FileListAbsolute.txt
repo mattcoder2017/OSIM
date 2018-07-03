@@ -152,3 +152,5 @@ D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debu
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\FluentAssertions.xml
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\nunit.framework.pdb
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\nunit.framework.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\EntityFramework.SqlServer.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\EntityFramework.SqlServer.xml

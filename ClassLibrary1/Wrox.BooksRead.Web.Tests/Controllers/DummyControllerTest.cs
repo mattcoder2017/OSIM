@@ -38,6 +38,7 @@ namespace Wrox.BooksRead.Web.Tests.Controllers
        }
 
         [TestMethod]
+        [TestCategory("Controller Test")]
        public void Edit_WhenProductDoesNotExist_ReturnNotFound()
         {
             Product obj = null;
@@ -47,6 +48,8 @@ namespace Wrox.BooksRead.Web.Tests.Controllers
             var controller = new DummyController(null, null, unitOfWork.Object);
             controller.Edit(1).Should().BeOfType(typeof(HttpNotFoundResult));
         }
+
+        
     }
 
     

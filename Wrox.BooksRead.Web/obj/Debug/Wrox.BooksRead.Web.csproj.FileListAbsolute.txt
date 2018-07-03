@@ -117,7 +117,6 @@ D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Microsoft.Owin.Security.
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Microsoft.Owin.Security.OAuth.dll
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Microsoft.Owin.Security.Twitter.dll
-D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Microsoft.Web.Infrastructure.dll
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Newtonsoft.Json.dll
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Owin.dll
 D:\VS Projects\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\StackExchange.Redis.dll
