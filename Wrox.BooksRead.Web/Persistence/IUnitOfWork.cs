@@ -12,16 +12,21 @@ namespace Wrox.BooksRead.Web.Persistence
     {
          IProductRepository ProductRepo { get;}
          ICategoryRepository CategoryRepo { get;  }
+         object DBAccess { get; }
+         
 
         void Complete();
     }
 
     public class UnitOfWork : IUnitOfWork
     {
-        private EFDBEntities _context; 
+         readonly EFDBEntities _context; 
+         readonly ReadEFDBEntities _readcontext;
+
         public UnitOfWork()
         {
             _context = new EFDBEntities();
+            _readcontext = new ReadEFDBEntities();
         }
         public ICategoryRepository CategoryRepo
         {
@@ -31,11 +36,19 @@ namespace Wrox.BooksRead.Web.Persistence
             }
         }
 
+        public object DBAccess
+        {
+            get
+            {
+                return _context;
+            }
+        }
+
         public IProductRepository ProductRepo
         {
             get
             {
-                return new ProductRepository(_context);
+                return new ProductRepository(_context, _readcontext);
             }
         }
 

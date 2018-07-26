@@ -10,15 +10,10 @@ namespace Wrox.BooksRead.Web.Controllers
     [Authorize]
     public class DummyController : Controller
     {
-        private IProductRepository ProductRepository;
-        private ICategoryRepository CategoryRepository;
         private IUnitOfWork unitOfWork;
-
         
-        public DummyController(IProductRepository moqProductRepository, ICategoryRepository cateRepo, IUnitOfWork UnitOfWork)
+        public DummyController(IUnitOfWork UnitOfWork)
         {
-            this.ProductRepository = moqProductRepository;
-            this.CategoryRepository = cateRepo;
             this.unitOfWork = UnitOfWork;
         }
 
@@ -46,7 +41,7 @@ namespace Wrox.BooksRead.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (ProductRepository.AddProduct(product))
+                if (this.unitOfWork.ProductRepo.AddProduct(product))
                 {
                     unitOfWork.Complete();
                     return RedirectToAction("Index", "Home");
@@ -55,7 +50,7 @@ namespace Wrox.BooksRead.Web.Controllers
                     return View("Create", product);
             }
             
-            product.Categories = RedisLib.GetCache<IEnumerable<Category>>("Categories", () => { return CategoryRepository.AllCategories(); });
+            product.Categories = RedisLib.GetCache<IEnumerable<Category>>("Categories", () => { return unitOfWork.CategoryRepo.AllCategories(); });
             // CategoryRepository.AllCategories();
             return View("GetAllAction");
         }
@@ -80,7 +75,7 @@ namespace Wrox.BooksRead.Web.Controllers
             Product product = unitOfWork.ProductRepo.GetProductById(Id);
             if (product == null) 
                return HttpNotFound();
-            ProductViewModel viewModel = new ProductViewModel(product, CategoryRepository.AllCategories());
+            ProductViewModel viewModel = new ProductViewModel(product, this.unitOfWork.CategoryRepo.AllCategories());
             return View(viewModel);
         }
     }

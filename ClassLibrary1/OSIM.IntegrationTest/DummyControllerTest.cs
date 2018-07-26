@@ -30,10 +30,9 @@ namespace OSIM.IntegrationTest
         public void GetAllAction_WhenCall_ShouldReturnProductInFutureOnlyToView()
         {
             //Arranage
-            Product[] products = new[]{ new Product { Id = 0, CreateDate = DateTime.Now.AddDays(1), Name = "Dummy1", Category = 0, Price = 0 } ,
-                new Product { Id = 1, CreateDate = DateTime.Now.AddDays(2), Name = "Dummy2", Category = 0, Price = 0 },
-                new Product { Id = 2, CreateDate = DateTime.Now.AddDays(-2), Name = "DummyObsolete", Category = 0, Price = 0 }
-            };
+            Product[] products = new[]{ new Product { Id = 100, CreateDate = DateTime.Now.AddDays(1), Name = "Dummy1", Category = 0, Price = 0 } ,
+                new Product { Id = 101, CreateDate = DateTime.Now.AddDays(2), Name = "Dummy2", Category = 0, Price = 0 },
+                new Product { Id = 102, CreateDate = DateTime.Now.AddDays(-2), Name = "DummyObsolete", Category = 0, Price = 0 } };
 
             Category category = new Category { Id = 0, Name = "Dummy Category" };
             try
@@ -43,8 +42,8 @@ namespace OSIM.IntegrationTest
 
                 context.SaveChanges();
 
-                //When 
-                DummyController controller = new DummyController(null, null, new UnitOfWork());
+                //Act 
+                DummyController controller = new DummyController(new UnitOfWork());
                 var result = controller.GetAllAction();
 
                 //Assert

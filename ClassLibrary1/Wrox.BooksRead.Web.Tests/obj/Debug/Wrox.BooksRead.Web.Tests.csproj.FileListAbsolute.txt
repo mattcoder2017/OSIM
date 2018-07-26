@@ -154,3 +154,7 @@ D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debu
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\nunit.framework.xml
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\EntityFramework.SqlServer.dll
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\EntityFramework.SqlServer.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\Wrox.BooksRead.Web.Tests.dll.CodeAnalysisLog.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\Wrox.BooksRead.Web.Tests.dll.lastcodeanalysissucceeded
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\AutoMapper.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\Wrox.BooksRead.Web.Tests\bin\Debug\AutoMapper.xml

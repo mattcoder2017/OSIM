@@ -13,6 +13,7 @@ namespace Wrox.BooksRead.Web.Repository
         IEnumerable<Product> AllProduct();
         bool AddProduct(ProductViewModel product);
         Product GetProductById(int? productid);
+        Product GetProductByIdWithUpdate(int? productid);
         bool EditProduct(ProductViewModel product);
         void Delete(int id);
     }
@@ -46,21 +47,26 @@ namespace Wrox.BooksRead.Web.Repository
             throw new NotImplementedException();
         }
 
-
+        public Product GetProductByIdWithUpdate(int? productid)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class ProductRepository : IProductRepository
     {
         IEFDBEntities _context = null;
+        IEFDBEntities _readcontext;
         public ProductRepository()
         {
             // _context = new EFDBEntities();
 
         }
 
-        public ProductRepository(IEFDBEntities _context)
+        public ProductRepository(IEFDBEntities _context, IEFDBEntities _readcontext)
         {
             this._context = _context;
+            this._readcontext = _readcontext;
         }
 
         public bool AddProduct(ProductViewModel product)
@@ -86,7 +92,8 @@ namespace Wrox.BooksRead.Web.Repository
 
         public IEnumerable<Product> AllProduct()
         {
-            return _context.Products.Where(p=>p.CreateDate > DateTime.Today).Include(p => p.Category1).ToList<Product>();
+            return _readcontext.Products.ToList<Product>();
+               // .Where(p=>p.CreateDate > DateTime.Today).Include(p => p.Category1).ToList<Product>();
         }
 
         public bool EditProduct(ProductViewModel vmproduct)
@@ -113,11 +120,21 @@ namespace Wrox.BooksRead.Web.Repository
         }
         public Product GetProductById(int? productid)
         {
-            return _context.Products
+            return _readcontext.Products
                  .Where(i => i.Id == productid)
                  .Include(i => i.ProductNotifications)
                  .Include(i => i.ProductSubscriptions).FirstOrDefault<Product>();
 
+        }
+
+        public Product GetProductByIdWithUpdate(int? productid)
+        {
+            return _context.Products//.AsNoTracking()
+                 .Where(i => i.Id == productid)
+                 .Include(i => i.ProductNotifications)
+                 .Include(i => i.ProductSubscriptions).FirstOrDefault<Product>();
+
+            //return p;
         }
 
         public void Delete(int Id)

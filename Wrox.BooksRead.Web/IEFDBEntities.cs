@@ -8,7 +8,7 @@ namespace Wrox.BooksRead.Web.Models
         DbSet<Category> Categories { get; set; }
         DbSet<ProductNotification> ProductNotifications { get; set; }
         DbSet<Product> Products { get; set; }
-        DbSet<ProductSubscription> ProductSubscriptions { get; set; }
+       // DbSet<ProductSubscription> ProductSubscriptions { get; set; }
         DbSet<UserProductNotifiation> UserProductNotifiations { get; set; }
         DbSet<UserProductNotification> UserProductNotifications { get; set; }
     }

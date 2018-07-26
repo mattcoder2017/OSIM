@@ -32,7 +32,7 @@
             @Html.DisplayFor(modelItem => item.Category1.Name) 
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @*@Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+            <a href="#" class="asyncSubsribe" data-value="@item.Id">Subscribe</a> |
             <a href="#" class="asyncClass" data-value="@item.Id">Delete</a>
 
 
@@ -43,43 +43,14 @@
 @*</table>*@
 
 @section scripts
-{   <script>
-       $(document).ready(
-           $(".asyncClass").click(
-                 function (e)
-                 {
-                     var link = $(e.target);
-                     var id = link.attr("data-value");
-                     bootbox.dialog(
-                         {
-                             message: "Do you really want to remove this product??",
-                             title: "Confirmation",
-                             buttons:
-                                 {
-                                     no: {
-                                         label: "No",
-                                         className: "btn-default",
-                                         callback: function() {bootbox.hideAll();}
-                                     },
-                                     yes: {
-                                         label: "Yes",
-                                         className: "btn-danger",
-                                         callback: function() {
-                                                 $.ajax(
-                                                {
-                                                    url : "/api/Product/"+ id,
-                                                    method: "DELETE"
-                                                })
-                                                     .done(function() {
-                                                        alert("delete succesful!");
-                                                        link.parents("ul").fadeOut(function()
-                                                        { $(this).remove(); })
-                                                     })
-                                                     .fail(function (a)
-                                                       {
-                                                           alert(a);
-                                                       })
-                                            }}}}
-                  )}))
-       </script>       
-}
+{
+    <script>
+        $(document).ready(
+            function()
+            {
+                DummyPage.BindDeleteToJs();
+                DummyPage.BindSubscribeToJs();
+            }
+        );
+    </script>
+    }

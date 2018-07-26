@@ -94,3 +94,7 @@ D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\System.We
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\System.Net.Http.Formatting.xml
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\Newtonsoft.Json.xml
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\OSIM.UnitTest.dll.CodeAnalysisLog.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\OSIM.UnitTest.dll.lastcodeanalysissucceeded
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\AutoMapper.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\AutoMapper.xml

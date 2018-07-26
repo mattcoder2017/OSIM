@@ -8,6 +8,10 @@ namespace Wrox.BooksRead.Web
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                  "~/Scripts/App/dummy.js"));
+            
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -15,7 +19,8 @@ namespace Wrox.BooksRead.Web
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootbox").Include(
-                       "~/Scripts/bootbox.min.js"));
+                       "~/Scripts/bootbox.min.js",
+                        "~/Scripts/App/dummy.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.

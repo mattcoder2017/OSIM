@@ -26,7 +26,7 @@ namespace Wrox.BooksRead.Web.Tests.Controllers
                       new Product { Id=1, Name="Product CN" }
                    }
                 );
-            DummyController Controller = new DummyController(MoqProductRepository.Object, null, null);
+            DummyController Controller = new DummyController( null);
 
             //Act
             ViewResult VR = Controller.GetAllAction() as ViewResult;
@@ -45,7 +45,7 @@ namespace Wrox.BooksRead.Web.Tests.Controllers
             var unitOfWork = new Mock<IUnitOfWork>();
             unitOfWork.Setup(i => i.ProductRepo.GetProductById(It.IsAny<int>())).Returns(obj);
 
-            var controller = new DummyController(null, null, unitOfWork.Object);
+            var controller = new DummyController(unitOfWork.Object);
             controller.Edit(1).Should().BeOfType(typeof(HttpNotFoundResult));
         }
 

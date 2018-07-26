@@ -26,7 +26,7 @@ namespace Wrox.BooksRead.Web.Tests.Repository
            
             var moqDB = new Mock<IEFDBEntities>();
             moqDB.SetupGet(i => i.Products).Returns(data.Object);
-            var Repo = new ProductRepository(moqDB.Object);
+            var Repo = new ProductRepository(null, moqDB.Object);
             Repo.GetProductById(4).Should().BeNull();
 
         }

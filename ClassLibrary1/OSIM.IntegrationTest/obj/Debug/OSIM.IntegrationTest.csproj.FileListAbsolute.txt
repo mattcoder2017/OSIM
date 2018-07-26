@@ -95,3 +95,9 @@ D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Sy
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\System.Web.WebPages.xml
 D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\AutoMapper.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\System.Web.Razor.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\System.Web.WebPages.Razor.dll
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\AutoMapper.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\System.Web.Razor.xml
+D:\VS Projects\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\System.Web.WebPages.Razor.xml
