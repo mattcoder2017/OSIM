@@ -37,7 +37,7 @@ namespace Wrox.BooksRead.Web
             container.RegisterType<AccountController>(new InjectionConstructor());
             container.RegisterType<ManageController>(new InjectionConstructor());
                  
-            container.RegisterType<Product>(new  InjectionProperty("ProductRepo"));
+            //container.RegisterType<Product>(new  InjectionProperty("ProductRepo"));
 
             return container;
         }
