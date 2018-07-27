@@ -16,9 +16,10 @@ namespace Wrox.BooksRead.Web.Controllers.Api
     [System.Web.Http.RoutePrefix("api/ProductSubscription")]
     public class ProductSubscriptionController : ApiController
     {
-        
-        public ProductSubscriptionController()
+        private IUnitOfWork uow ;
+        public ProductSubscriptionController(IUnitOfWork uow)
         {
+            this.uow = uow;
         }
 
         [System.Web.Http.Route("get")]
@@ -67,7 +68,11 @@ namespace Wrox.BooksRead.Web.Controllers.Api
 
         private IUnitOfWork UnitOfWork
         {
-            get { return DependencyResolver.Current.GetService<IUnitOfWork>(); }
+            get {
+                return
+                  this.uow;
+                    //DependencyResolver.Current.GetService<IUnitOfWork>();
+            }
 
         }
     }

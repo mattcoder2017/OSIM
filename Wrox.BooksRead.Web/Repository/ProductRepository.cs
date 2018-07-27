@@ -63,10 +63,10 @@ namespace Wrox.BooksRead.Web.Repository
 
         }
 
-        public ProductRepository(IEFDBEntities _context, IEFDBEntities _readcontext)
+        public ProductRepository(IEFDBEntities context, IEFDBEntities readcontext)
         {
-            this._context = _context;
-            this._readcontext = _readcontext;
+            this._context = context;
+            this._readcontext = readcontext;
         }
 
         public bool AddProduct(ProductViewModel product)

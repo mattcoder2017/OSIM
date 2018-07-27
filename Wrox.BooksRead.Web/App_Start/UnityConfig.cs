@@ -1,6 +1,7 @@
 using System;
 
 using Unity;
+using Wrox.BooksRead.Web.Persistence;
 using Wrox.BooksRead.Web.Repository;
 
 namespace Wrox.BooksRead.Web
@@ -43,6 +44,7 @@ namespace Wrox.BooksRead.Web
 
             // TODO: Register your type's mappings here.
             container.RegisterType<IProductRepository, ProductRepository>();
+            container.RegisterType<IUnitOfWork, UnitOfWork>();
         }
     }
 }

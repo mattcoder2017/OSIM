@@ -20,8 +20,8 @@ namespace Wrox.BooksRead.Web.Persistence
 
     public class UnitOfWork : IUnitOfWork
     {
-         readonly EFDBEntities _context; 
-         readonly ReadEFDBEntities _readcontext;
+         private EFDBEntities _context; 
+         private ReadEFDBEntities _readcontext;
 
         public UnitOfWork()
         {
