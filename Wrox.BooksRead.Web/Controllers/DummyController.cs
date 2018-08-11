@@ -44,7 +44,7 @@ namespace Wrox.BooksRead.Web.Controllers
                 if (this.unitOfWork.ProductRepo.AddProduct(product))
                 {
                     unitOfWork.Complete();
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("GetAllAction", "Dummy");
                 }
                 else
                     return View("Create", product);
@@ -58,14 +58,15 @@ namespace Wrox.BooksRead.Web.Controllers
         [HttpPost]
         public ActionResult EditProductToDB(ProductViewModel product)
         {
-             if (ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                Product originalproduct = unitOfWork.ProductRepo.GetProductById(product.Id);
+                Product originalproduct = unitOfWork.ProductRepo.GetProductByIdWithUpdate(product.Id);
                 originalproduct.Update(product);
-                unitOfWork.Complete();
-               
-                return RedirectToAction("GetAllAction", "Dummy");
-              
+                if (originalproduct.PriceIsChanged)
+                {
+                    unitOfWork.NotificationRepo.buildPriceChangeNotification(originalproduct, originalproduct.ProductSubscriptions, originalproduct.ProductNotifications.GetEnumerator().Current);
+                    unitOfWork.Complete();
+                }
             }
             return RedirectToAction("GetAllAction", "Dummy");
         }

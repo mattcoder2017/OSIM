@@ -14,9 +14,9 @@ namespace Wrox.BooksRead.Web.Extensions
             
             product.ProductSubscriptions.Add(subscription);
             
-            EFDBEntities ef = uow.DBAccess as EFDBEntities;
-            ef.Set<ProductSubscription>().AsNoTracking();
-            ef.Set<ProductSubscription>().Add(subscription);
+            //EFDBEntities ef = uow.DBAccess as EFDBEntities;
+            //ef.Set<ProductSubscription>().AsNoTracking();
+            //ef.Set<ProductSubscription>().Add(subscription);
             //ef.Entry(product).CurrentValues.SetValues(product);
 
 

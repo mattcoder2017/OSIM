@@ -8,19 +8,29 @@ namespace Wrox.BooksRead.Web.Repository
 {
     public class NotificationRepository : INotificationRepository
     {
-        EFDBEntities _context = null;
-        public NotificationRepository()
+        IEFDBEntities _context = null;
+        IEFDBEntities _readcontext = null;
+
+        public NotificationRepository(IEFDBEntities context, IEFDBEntities readcontext)
         {
-            _context = new EFDBEntities();
+            _context = context;
+            _readcontext = readcontext; 
+
         }
       
-        public void buildPriceChangeNotification(Product originalProduct, ProductViewModel priceChangeProduct)
+        public void buildPriceChangeNotification(Product originalProduct, ICollection<ProductSubscription> subscriptions, ProductNotification notification)
         {
-            throw new NotImplementedException();
+            foreach(var subscription in subscriptions)
+            { 
+            _context.UserProductNotifications.Add(
+                new UserProductNotification { ProductNotification = notification, UserId = subscription.UserId, IsRead = 0 }
+                );
+            }
+
         }
     }
     public interface INotificationRepository
     {
-        void buildPriceChangeNotification(Product originalProduct, ProductViewModel priceChangeProduct);
+        void buildPriceChangeNotification(Product originalProduct, ICollection<ProductSubscription> subscriptions, ProductNotification notification);
     }
 }

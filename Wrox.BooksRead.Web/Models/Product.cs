@@ -40,7 +40,9 @@ namespace Wrox.BooksRead.Web.Models
         public virtual ICollection<ProductSubscription> ProductSubscriptions { get; set; }
         public bool PriceIsChanged { get; private set; }
         public void Update(ProductViewModel priceChangeProduct)
-         {              
+         {
+             this.Name = priceChangeProduct.Name;
+             this.Stock = priceChangeProduct.Stock;
              if (this.Price != priceChangeProduct.Price) 
              { 
                  this.PriceIsChanged = true; 
@@ -51,12 +53,13 @@ namespace Wrox.BooksRead.Web.Models
                          this.Id.ToString(), 
                          this.Name, 
                          this.Price.ToString(), 
-                         priceChangeProduct.Price.ToString() }); 
- 
- 
-                 this.ProductNotifications.Add(productNotification); 
-             } 
-         } 
+                         priceChangeProduct.Price.ToString() });
+
+                productNotification.Product = this;
+                this.ProductNotifications.Add(productNotification);
+             }
+            this.Price = priceChangeProduct.Price;
+        } 
 
     }
 }

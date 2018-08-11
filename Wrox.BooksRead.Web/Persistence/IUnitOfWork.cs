@@ -12,10 +12,10 @@ namespace Wrox.BooksRead.Web.Persistence
     {
          IProductRepository ProductRepo { get;}
          ICategoryRepository CategoryRepo { get;  }
-         object DBAccess { get; }
-         
+         INotificationRepository NotificationRepo { get; }
+         IUserNotificationRepository UserNotificationRepo { get; }
 
-        void Complete();
+         void Complete();
     }
 
     public class UnitOfWork : IUnitOfWork
@@ -36,11 +36,11 @@ namespace Wrox.BooksRead.Web.Persistence
             }
         }
 
-        public object DBAccess
+        public INotificationRepository NotificationRepo
         {
             get
             {
-                return _context;
+                return new NotificationRepository(_context, _readcontext);
             }
         }
 
@@ -49,6 +49,14 @@ namespace Wrox.BooksRead.Web.Persistence
             get
             {
                 return new ProductRepository(_context, _readcontext);
+            }
+        }
+
+        public IUserNotificationRepository UserNotificationRepo
+        {
+            get
+            {
+                return new UserNotificationRepository(_context, _readcontext);
             }
         }
 

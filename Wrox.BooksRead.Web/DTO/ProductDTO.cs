@@ -20,9 +20,7 @@ namespace Wrox.BooksRead.Web.DTO
     {
        
         public ProductDto()
-        {
-           
-        }
+        {}
         
         public int Id { get; set; }
         public string Name { get; set; }

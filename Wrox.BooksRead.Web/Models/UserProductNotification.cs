@@ -15,11 +15,13 @@ namespace Wrox.BooksRead.Web.Models
 
         [Required]
         [StringLength(128)]
-        public string UserId { get; set; }
+        public String UserId { get; set; }
 
         public int IsRead { get; set; }
 
         public virtual AspNetUser AspNetUser { get; set; }
+
+        public String NotificationMessage { get { return ProductNotification.Notification; } }
 
         public virtual ProductNotification ProductNotification { get; set; }
     }

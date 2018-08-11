@@ -28,7 +28,6 @@ namespace Wrox.BooksRead.Web.Controllers.Api
             Mapper.CreateMap<Product, ProductDto>();
             var Products = UnitOfWork.ProductRepo.AllProduct();
             return Products.Select(Mapper.Map<Product, ProductDto>);
-
         }
 
         //[System.Web.Http.Route("Subscribe")]
@@ -42,16 +41,7 @@ namespace Wrox.BooksRead.Web.Controllers.Api
                 if (product.ProductSubscriptions.Where(e => e.ProductId == id
                  && e.AspNetUser.Id == User.Identity.GetUserId()).Count() == 0)
                 {
-                    //   EFDBEntities DBContext = new EFDBEntities();
-                    //   Product p = DBContext.Products
-                    //.Where(i => i.Id == id)
-                    //.Include(i => i.ProductSubscriptions)
-                    //.FirstOrDefault<Product>();
-
-
-                    //   p.ProductSubscriptions.Add(new ProductSubscription { ProductId = p.Id, UserId = "a60d758a-684b-4228-9744-8df530c49efc" });
-                    //   DBContext.SaveChanges();
-                    product.ProductSubscriptions.Add(new ProductSubscription
+                     product.ProductSubscriptions.Add(new ProductSubscription
                     { Product = product, ProductId = id, UserId = User.Identity.GetUserId() });
 
                     UnitOfWork.Complete();

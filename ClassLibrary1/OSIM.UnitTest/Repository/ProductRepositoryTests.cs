@@ -14,7 +14,7 @@ namespace Wrox.BooksRead.Web.Repository.Tests
         [TestMethod()]
         public void GetProductById_ProductDoesNotExist_ReturnNotFound()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }
