@@ -190,3 +190,14 @@ D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Sys
 D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\obj\Debug\OSIM.IntegrationTest.csprojResolveAssemblyReference.cache
 D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\obj\Debug\OSIM.IntegrationTest.dll
 D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\obj\Debug\OSIM.IntegrationTest.pdb
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\NUnit3.TestAdapter.dll
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\NUnit3.TestAdapter.pdb
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\nunit.engine.dll
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\nunit.engine.api.dll
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Mono.Cecil.dll
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\WebGrease.dll
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Antlr3.Runtime.dll
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.IntegrationTest\bin\Debug\Antlr3.Runtime.pdb

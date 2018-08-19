@@ -282,7 +282,7 @@ D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Microsoft.Owin.Security.O
 D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Microsoft.Owin.Security.Google.xml
 D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Microsoft.Owin.Security.Twitter.xml
 D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\obj\Debug\Wrox.BooksRead.Web.csprojResolveAssemblyReference.cache
 D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\obj\Debug\Wrox.BooksRead.Web.dll
 D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\obj\Debug\Wrox.BooksRead.Web.pdb
 D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Swashbuckle.Core.dll
+D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\obj\Debug\Wrox.BooksRead.Web.csprojResolveAssemblyReference.cache

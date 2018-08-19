@@ -179,3 +179,6 @@ D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\System.Web
 D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\obj\Debug\OSIM.UnitTest.csprojResolveAssemblyReference.cache
 D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\obj\Debug\OSIM.UnitTest.dll
 D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\obj\Debug\OSIM.UnitTest.pdb
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\nunit.framework.dll
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\nunit.framework.pdb
+D:\SourceCode\ASPMVC + TDD\OSIM\ClassLibrary1\OSIM.UnitTest\bin\Debug\nunit.framework.xml
