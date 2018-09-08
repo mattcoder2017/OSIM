@@ -35,6 +35,18 @@ namespace Wrox.BooksRead.Web.Controllers.Api
             return notifications.Select(Mapper.Map<UserProductNotification, UserProductNoticationDTO>);
           
         }
-         
+
+        [HttpGet]
+        public IEnumerable<UserProductNoticationDTO> GetUserNotification()
+        {
+            
+            string    userid = User.Identity.GetUserId();
+            
+            Mapper.CreateMap<UserProductNotification, UserProductNoticationDTO>();
+            var notifications = UnitOfWork.UserNotificationRepo.GetUserNotification(userid);
+            return notifications.Select(Mapper.Map<UserProductNotification, UserProductNoticationDTO>);
+
+        }
+
     }
 }

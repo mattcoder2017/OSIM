@@ -40,3 +40,37 @@ textarea {
 .navbar-inverse .navbar-nav > li > a {
     color: white;
 }
+
+.nav .notifications {
+    position: relative;    
+}
+
+    .nav .notifications .badge {
+        position: absolute;
+        top: 8px;
+        right: -1px;
+        background: #a80a0a;
+    }
+
+ul.notification
+{
+    list-style: none;
+        padding-left: 0;
+        width : 300px;
+}
+
+.popover-content {
+    padding: 9px 14px;
+    color: #4a0808;
+}
+
+.popover-title {
+    padding: 8px 14px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+    background-color: #a01d1d;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+}
