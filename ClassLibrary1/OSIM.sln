@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIM.UnitTest", "OSIM.UnitTest\OSIM.UnitTest.csproj", "{D8B21E55-7E9B-4502-AB18-CA5C8ADAE08A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIM.IntegrationTest", "OSIM.IntegrationTest\OSIM.IntegrationTest.csproj", "{F7BE09EA-448B-43DF-A809-184F4ECC0D26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrox.BooksRead.Web", "..\Wrox.BooksRead.Web\Wrox.BooksRead.Web.csproj", "{00E73FFD-B8FF-4252-8CD3-FB8B5F30A72B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrox.BooksRead.Web.Tests", "Wrox.BooksRead.Web.Tests\Wrox.BooksRead.Web.Tests.csproj", "{07BAB05B-2F8F-453C-BA1E-6D2D8C27961E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIM.IdentityServer2", "OSIM.IdentityServer2\OSIM.IdentityServer2.csproj", "{3DF9E63A-137E-4450-8E5E-6506FFE13CF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIM.Constants", "..\OSIM.Constants\OSIM.Constants.csproj", "{98BA9931-7967-444F-8530-A8C27B5AE62A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIM.WebResource", "..\OSIM.WebResource\OSIM.WebResource.csproj", "{A98A69A5-C303-49DF-A13E-7FB7D0229372}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D8B21E55-7E9B-4502-AB18-CA5C8ADAE08A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8B21E55-7E9B-4502-AB18-CA5C8ADAE08A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8B21E55-7E9B-4502-AB18-CA5C8ADAE08A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8B21E55-7E9B-4502-AB18-CA5C8ADAE08A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F7BE09EA-448B-43DF-A809-184F4ECC0D26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F7BE09EA-448B-43DF-A809-184F4ECC0D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7BE09EA-448B-43DF-A809-184F4ECC0D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +33,18 @@ Global
 		{07BAB05B-2F8F-453C-BA1E-6D2D8C27961E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07BAB05B-2F8F-453C-BA1E-6D2D8C27961E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07BAB05B-2F8F-453C-BA1E-6D2D8C27961E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF9E63A-137E-4450-8E5E-6506FFE13CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF9E63A-137E-4450-8E5E-6506FFE13CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF9E63A-137E-4450-8E5E-6506FFE13CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF9E63A-137E-4450-8E5E-6506FFE13CF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98BA9931-7967-444F-8530-A8C27B5AE62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BA9931-7967-444F-8530-A8C27B5AE62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BA9931-7967-444F-8530-A8C27B5AE62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BA9931-7967-444F-8530-A8C27B5AE62A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A98A69A5-C303-49DF-A13E-7FB7D0229372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A98A69A5-C303-49DF-A13E-7FB7D0229372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A98A69A5-C303-49DF-A13E-7FB7D0229372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A98A69A5-C303-49DF-A13E-7FB7D0229372}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
