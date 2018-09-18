@@ -25,20 +25,20 @@ namespace OSIM.IdentityServer2
                         new Claim (Constants.ClaimTypes.Role, Fields.RoleAdmin)
                     }
                 }
-                //,
+                ,
 
-                 //new InMemoryUser {
-                 //   Username = "Simon",
-                 //   Password ="1",
-                 //   Subject = "b05d3546-6ca8-4d32-b95c-77e94d705ddf",
-                 //   Claims = new[]{
-                 //       new Claim (Constants.ClaimTypes.GivenName, "Simon" ),
-                 //       new Claim (Constants.ClaimTypes.FamilyName, "Yang" ),
-                 //       new Claim (Constants.ClaimTypes.Address, "401, 81, JiLiXia RD North, Guangzhou" ),
-                 //       new Claim (Constants.ClaimTypes.Role, Fields.WebResource)
-                 //       //new Claim (Constants.ClaimTypes.Role, Fields.WroxBooksRead)
-                 //   }
-                //}
+                 new InMemoryUser {
+                    Username = "Simon",
+                    Password ="1",
+                    Subject = "b05d3546-6ca8-4d32-b95c-77e94d705dde",
+                    Claims = new[]{
+                        new Claim (Constants.ClaimTypes.GivenName, "Simon" ),
+                        new Claim (Constants.ClaimTypes.FamilyName, "Yang" ),
+                        new Claim (Constants.ClaimTypes.Address, "401, 81, JiLiXia RD North, Guangzhou" ),
+                        new Claim (Constants.ClaimTypes.Role, Fields.RoleUser)
+                        //new Claim (Constants.ClaimTypes.Role, Fields.WroxBooksRead)
+                    }
+                }
             };
             
         }

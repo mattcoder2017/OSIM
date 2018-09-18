@@ -18,6 +18,7 @@ namespace Wrox.BooksRead.Web.Controllers
         }
 
        [ResourceAuthorize(Fields.Read, Fields.WroxBooksRead)]
+       [HandleForbidden]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

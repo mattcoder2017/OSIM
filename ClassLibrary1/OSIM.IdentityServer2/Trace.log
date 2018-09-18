@@ -589,3 +589,701 @@ iisexpress.exe Information: 0 : 2018-09-17 07:42:36.875 +08:00 [Information] Get
 iisexpress.exe Information: 0 : 2018-09-17 07:42:36.886 +08:00 [Information] End authorize request
 iisexpress.exe Information: 0 : 2018-09-17 07:42:36.886 +08:00 [Information] Posting to https://localhost:44333/
 2018-09-17 07:42:36.886 +08:00 [Debug] Using DefaultViewService to render authorization response HTML
+iisexpress.exe Warning: 0 : 2018-09-17 10:59:35.848 +08:00 [Warning] AuthorizationCodeStore not configured - falling back to InMemory
+iisexpress.exe Warning: 0 : 2018-09-17 10:59:35.852 +08:00 [Warning] TokenHandleStore not configured - falling back to InMemory
+iisexpress.exe Warning: 0 : 2018-09-17 10:59:35.852 +08:00 [Warning] ConsentStore not configured - falling back to InMemory
+iisexpress.exe Warning: 0 : 2018-09-17 10:59:35.852 +08:00 [Warning] RefreshTokenStore not configured - falling back to InMemory
+iisexpress.exe Information: 0 : 2018-09-17 10:59:36.195 +08:00 [Information] Start discovery request
+iisexpress.exe Information: 0 : 2018-09-17 10:59:36.653 +08:00 [Information] Start key discovery request
+iisexpress.exe Information: 0 : 2018-09-17 10:59:36.861 +08:00 [Information] Start authorize request
+iisexpress.exe Information: 0 : 2018-09-17 10:59:36.866 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-17 10:59:36.893 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"unknown\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=4nQkSjGAgk8kA3YZbAiMuAwYfz4E44j-rwaEfFNzYw39QnJ9uWtmA6J0b3_WisjG4vt0jSfzICzTKaS1RyuseoMhLzVg2fTeJs75WvM_wM9_IJRHMBp8E4t0vmr_wEMzmquY7-muJReLSzVsI3SfbmAQLLAOscZ5YR6RTL7hP69mv2hlWYOe_kUjegiSL8zGHIrQG-ZyAG_mogrWJ7OvUg\",
+  \"Nonce\": \"636727499766806021.ZDAyN2U2NTQtNzIzYS00MjRlLWIwNmItOWE3MjE4OGQ2NzlkODBkNzllOWUtMWMzOS00NmQ4LTk0ZDUtOTgzNGRmNzQzNDlj\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=4nQkSjGAgk8kA3YZbAiMuAwYfz4E44j-rwaEfFNzYw39QnJ9uWtmA6J0b3_WisjG4vt0jSfzICzTKaS1RyuseoMhLzVg2fTeJs75WvM_wM9_IJRHMBp8E4t0vmr_wEMzmquY7-muJReLSzVsI3SfbmAQLLAOscZ5YR6RTL7hP69mv2hlWYOe_kUjegiSL8zGHIrQG-ZyAG_mogrWJ7OvUg\",
+    \"nonce\": \"636727499766806021.ZDAyN2U2NTQtNzIzYS00MjRlLWIwNmItOWE3MjE4OGQ2NzlkODBkNzllOWUtMWMzOS00NmQ4LTk0ZDUtOTgzNGRmNzQzNDlj\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-17 10:59:36.896 +08:00 [Information] User is not authenticated. Redirecting to login.
+iisexpress.exe Information: 0 : 2018-09-17 10:59:36.904 +08:00 [Information] End authorize request
+iisexpress.exe Information: 0 : 2018-09-17 10:59:36.905 +08:00 [Information] Redirecting to login page
+2018-09-17 10:59:36.913 +08:00 [Debug] Protecting message: "{\"ReturnUrl\":\"https://localhost:44389/identity/connect/authorize?client_id=OSIMHybrid&redirect_uri=https%3A%2F%2Flocalhost%3A44333%2F&response_mode=form_post&response_type=id_token%20code%20token&scope=openid%20profile%20roles&state=OpenIdConnect.AuthenticationProperties%3D4nQkSjGAgk8kA3YZbAiMuAwYfz4E44j-rwaEfFNzYw39QnJ9uWtmA6J0b3_WisjG4vt0jSfzICzTKaS1RyuseoMhLzVg2fTeJs75WvM_wM9_IJRHMBp8E4t0vmr_wEMzmquY7-muJReLSzVsI3SfbmAQLLAOscZ5YR6RTL7hP69mv2hlWYOe_kUjegiSL8zGHIrQG-ZyAG_mogrWJ7OvUg&nonce=636727499766806021.ZDAyN2U2NTQtNzIzYS00MjRlLWIwNmItOWE3MjE4OGQ2NzlkODBkNzllOWUtMWMzOS00NmQ4LTk0ZDUtOTgzNGRmNzQzNDlj&x-client-SKU=ID_NET451&x-client-ver=5.2.1.0\",\"ClientId\":\"OSIMHybrid\",\"AcrValues\":[],\"Created\":636727499768286169}"
+iisexpress.exe Information: 0 : 2018-09-17 10:59:36.945 +08:00 [Information] Login page requested
+2018-09-17 10:59:36.977 +08:00 [Debug] signin message passed to login: "{
+  \"ReturnUrl\": \"https://localhost:44389/identity/connect/authorize?client_id=OSIMHybrid&redirect_uri=https%3A%2F%2Flocalhost%3A44333%2F&response_mode=form_post&response_type=id_token%20code%20token&scope=openid%20profile%20roles&state=OpenIdConnect.AuthenticationProperties%3D4nQkSjGAgk8kA3YZbAiMuAwYfz4E44j-rwaEfFNzYw39QnJ9uWtmA6J0b3_WisjG4vt0jSfzICzTKaS1RyuseoMhLzVg2fTeJs75WvM_wM9_IJRHMBp8E4t0vmr_wEMzmquY7-muJReLSzVsI3SfbmAQLLAOscZ5YR6RTL7hP69mv2hlWYOe_kUjegiSL8zGHIrQG-ZyAG_mogrWJ7OvUg&nonce=636727499766806021.ZDAyN2U2NTQtNzIzYS00MjRlLWIwNmItOWE3MjE4OGQ2NzlkODBkNzllOWUtMWMzOS00NmQ4LTk0ZDUtOTgzNGRmNzQzNDlj&x-client-SKU=ID_NET451&x-client-ver=5.2.1.0\",
+  \"ClientId\": \"OSIMHybrid\",
+  \"IdP\": null,
+  \"Tenant\": null,
+  \"LoginHint\": null,
+  \"DisplayMode\": null,
+  \"UiLocales\": null,
+  \"AcrValues\": [],
+  \"Created\": 636727499768286169
+}"
+iisexpress.exe Information: 0 : 2018-09-17 10:59:36.983 +08:00 [Information] rendering login page
+iisexpress.exe Information: 0 : 2018-09-17 10:59:58.933 +08:00 [Information] Login page submitted
+iisexpress.exe Information: 0 : 2018-09-17 10:59:58.937 +08:00 [Information] Login credentials successfully validated by user service
+iisexpress.exe Information: 0 : 2018-09-17 10:59:58.944 +08:00 [Information] Calling PostAuthenticateAsync on the user service
+iisexpress.exe Information: 0 : 2018-09-17 10:59:58.946 +08:00 [Information] issuing primary signin cookie
+iisexpress.exe Information: 0 : 2018-09-17 10:59:58.982 +08:00 [Information] redirecting to: https://localhost:44389/identity/connect/authorize?client_id=OSIMHybrid&redirect_uri=https:%2F%2Flocalhost:44333%2F&response_mode=form_post&response_type=id_token code token&scope=openid profile roles&state=OpenIdConnect.AuthenticationProperties%3D4nQkSjGAgk8kA3YZbAiMuAwYfz4E44j-rwaEfFNzYw39QnJ9uWtmA6J0b3_WisjG4vt0jSfzICzTKaS1RyuseoMhLzVg2fTeJs75WvM_wM9_IJRHMBp8E4t0vmr_wEMzmquY7-muJReLSzVsI3SfbmAQLLAOscZ5YR6RTL7hP69mv2hlWYOe_kUjegiSL8zGHIrQG-ZyAG_mogrWJ7OvUg&nonce=636727499766806021.ZDAyN2U2NTQtNzIzYS00MjRlLWIwNmItOWE3MjE4OGQ2NzlkODBkNzllOWUtMWMzOS00NmQ4LTk0ZDUtOTgzNGRmNzQzNDlj&x-client-SKU=ID_NET451&x-client-ver=5.2.1.0
+iisexpress.exe Information: 0 : 2018-09-17 10:59:59.088 +08:00 [Information] Start authorize request
+iisexpress.exe Information: 0 : 2018-09-17 10:59:59.088 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-17 10:59:59.089 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705dde\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=4nQkSjGAgk8kA3YZbAiMuAwYfz4E44j-rwaEfFNzYw39QnJ9uWtmA6J0b3_WisjG4vt0jSfzICzTKaS1RyuseoMhLzVg2fTeJs75WvM_wM9_IJRHMBp8E4t0vmr_wEMzmquY7-muJReLSzVsI3SfbmAQLLAOscZ5YR6RTL7hP69mv2hlWYOe_kUjegiSL8zGHIrQG-ZyAG_mogrWJ7OvUg\",
+  \"Nonce\": \"636727499766806021.ZDAyN2U2NTQtNzIzYS00MjRlLWIwNmItOWE3MjE4OGQ2NzlkODBkNzllOWUtMWMzOS00NmQ4LTk0ZDUtOTgzNGRmNzQzNDlj\",
+  \"SessionId\": \"6b567b5e43e60bd81e6ea931a32dc23c\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=4nQkSjGAgk8kA3YZbAiMuAwYfz4E44j-rwaEfFNzYw39QnJ9uWtmA6J0b3_WisjG4vt0jSfzICzTKaS1RyuseoMhLzVg2fTeJs75WvM_wM9_IJRHMBp8E4t0vmr_wEMzmquY7-muJReLSzVsI3SfbmAQLLAOscZ5YR6RTL7hP69mv2hlWYOe_kUjegiSL8zGHIrQG-ZyAG_mogrWJ7OvUg\",
+    \"nonce\": \"636727499766806021.ZDAyN2U2NTQtNzIzYS00MjRlLWIwNmItOWE3MjE4OGQ2NzlkODBkNzllOWUtMWMzOS00NmQ4LTk0ZDUtOTgzNGRmNzQzNDlj\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-17 10:59:59.098 +08:00 [Information] Showing consent screen
+iisexpress.exe Information: 0 : 2018-09-17 10:59:59.103 +08:00 [Information] End authorize request
+iisexpress.exe Information: 0 : 2018-09-17 11:00:02.001 +08:00 [Information] Resuming from consent, restarting validation
+iisexpress.exe Information: 0 : 2018-09-17 11:00:02.002 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-17 11:00:02.002 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705dde\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=4nQkSjGAgk8kA3YZbAiMuAwYfz4E44j-rwaEfFNzYw39QnJ9uWtmA6J0b3_WisjG4vt0jSfzICzTKaS1RyuseoMhLzVg2fTeJs75WvM_wM9_IJRHMBp8E4t0vmr_wEMzmquY7-muJReLSzVsI3SfbmAQLLAOscZ5YR6RTL7hP69mv2hlWYOe_kUjegiSL8zGHIrQG-ZyAG_mogrWJ7OvUg\",
+  \"Nonce\": \"636727499766806021.ZDAyN2U2NTQtNzIzYS00MjRlLWIwNmItOWE3MjE4OGQ2NzlkODBkNzllOWUtMWMzOS00NmQ4LTk0ZDUtOTgzNGRmNzQzNDlj\",
+  \"SessionId\": \"6b567b5e43e60bd81e6ea931a32dc23c\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=4nQkSjGAgk8kA3YZbAiMuAwYfz4E44j-rwaEfFNzYw39QnJ9uWtmA6J0b3_WisjG4vt0jSfzICzTKaS1RyuseoMhLzVg2fTeJs75WvM_wM9_IJRHMBp8E4t0vmr_wEMzmquY7-muJReLSzVsI3SfbmAQLLAOscZ5YR6RTL7hP69mv2hlWYOe_kUjegiSL8zGHIrQG-ZyAG_mogrWJ7OvUg\",
+    \"nonce\": \"636727499766806021.ZDAyN2U2NTQtNzIzYS00MjRlLWIwNmItOWE3MjE4OGQ2NzlkODBkNzllOWUtMWMzOS00NmQ4LTk0ZDUtOTgzNGRmNzQzNDlj\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-17 11:00:02.011 +08:00 [Information] Creating Hybrid Flow response.
+iisexpress.exe Information: 0 : 2018-09-17 11:00:02.018 +08:00 [Information] Creating Implicit Flow response.
+2018-09-17 11:00:02.020 +08:00 [Debug] Creating access token
+2018-09-17 11:00:02.027 +08:00 [Debug] Creating JWT access token
+2018-09-17 11:00:02.081 +08:00 [Debug] Creating identity token
+iisexpress.exe Information: 0 : 2018-09-17 11:00:02.083 +08:00 [Information] Getting claims for identity token for subject: b05d3546-6ca8-4d32-b95c-77e94d705dde
+2018-09-17 11:00:02.085 +08:00 [Debug] Creating JWT identity token
+2018-09-17 11:00:02.094 +08:00 [Debug] Adding client "OSIMHybrid" to client list cookie for subject "b05d3546-6ca8-4d32-b95c-77e94d705dde"
+iisexpress.exe Information: 0 : 2018-09-17 11:00:02.098 +08:00 [Information] Posting to https://localhost:44333/
+2018-09-17 11:00:02.098 +08:00 [Debug] Using DefaultViewService to render authorization response HTML
+iisexpress.exe Warning: 0 : 2018-09-17 11:32:25.067 +08:00 [Warning] AuthorizationCodeStore not configured - falling back to InMemory
+iisexpress.exe Warning: 0 : 2018-09-17 11:32:25.072 +08:00 [Warning] TokenHandleStore not configured - falling back to InMemory
+iisexpress.exe Warning: 0 : 2018-09-17 11:32:25.072 +08:00 [Warning] ConsentStore not configured - falling back to InMemory
+iisexpress.exe Warning: 0 : 2018-09-17 11:32:25.072 +08:00 [Warning] RefreshTokenStore not configured - falling back to InMemory
+iisexpress.exe Information: 0 : 2018-09-17 11:32:25.426 +08:00 [Information] Start discovery request
+iisexpress.exe Information: 0 : 2018-09-17 11:32:25.696 +08:00 [Information] Start key discovery request
+iisexpress.exe Information: 0 : 2018-09-17 11:32:25.813 +08:00 [Information] Start authorize request
+iisexpress.exe Information: 0 : 2018-09-17 11:32:25.818 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-17 11:32:25.845 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705dde\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=7NR9CXSQ_2MQxrwUjIREzCHBVrw_DfrI1nTz36-ZHlEclGb9iKDboxSM3equbkmc-LY-Sg5uCUwhlo85FoyxMBm3ZbcF7hRWoRxjjcYQOs-Zgo2GV3icnhsbg1mq8SsoXbsfnM5Z79Vlb59gZBNslVevmfOztspS-ZuJvMMR_pOfjYOaO2lDl9_2566uEVwFCoo8d4SSjqDA3nPE4Tbi-g\",
+  \"Nonce\": \"636727519457254775.NzIwMjNiNmItN2JkZS00NzBiLWFlMzktY2ZjYWNjYTU1N2RkNzE3MzZkZTItMWE0OS00MTFiLTgwZTUtMTAzODBmZjI3ZTky\",
+  \"SessionId\": \"6b567b5e43e60bd81e6ea931a32dc23c\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=7NR9CXSQ_2MQxrwUjIREzCHBVrw_DfrI1nTz36-ZHlEclGb9iKDboxSM3equbkmc-LY-Sg5uCUwhlo85FoyxMBm3ZbcF7hRWoRxjjcYQOs-Zgo2GV3icnhsbg1mq8SsoXbsfnM5Z79Vlb59gZBNslVevmfOztspS-ZuJvMMR_pOfjYOaO2lDl9_2566uEVwFCoo8d4SSjqDA3nPE4Tbi-g\",
+    \"nonce\": \"636727519457254775.NzIwMjNiNmItN2JkZS00NzBiLWFlMzktY2ZjYWNjYTU1N2RkNzE3MzZkZTItMWE0OS00MTFiLTgwZTUtMTAzODBmZjI3ZTky\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-17 11:32:25.854 +08:00 [Information] Showing consent screen
+iisexpress.exe Information: 0 : 2018-09-17 11:32:25.864 +08:00 [Information] End authorize request
+iisexpress.exe Information: 0 : 2018-09-17 11:32:30.958 +08:00 [Information] Resuming from consent, restarting validation
+iisexpress.exe Information: 0 : 2018-09-17 11:32:30.958 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-17 11:32:30.959 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705dde\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=7NR9CXSQ_2MQxrwUjIREzCHBVrw_DfrI1nTz36-ZHlEclGb9iKDboxSM3equbkmc-LY-Sg5uCUwhlo85FoyxMBm3ZbcF7hRWoRxjjcYQOs-Zgo2GV3icnhsbg1mq8SsoXbsfnM5Z79Vlb59gZBNslVevmfOztspS-ZuJvMMR_pOfjYOaO2lDl9_2566uEVwFCoo8d4SSjqDA3nPE4Tbi-g\",
+  \"Nonce\": \"636727519457254775.NzIwMjNiNmItN2JkZS00NzBiLWFlMzktY2ZjYWNjYTU1N2RkNzE3MzZkZTItMWE0OS00MTFiLTgwZTUtMTAzODBmZjI3ZTky\",
+  \"SessionId\": \"6b567b5e43e60bd81e6ea931a32dc23c\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=7NR9CXSQ_2MQxrwUjIREzCHBVrw_DfrI1nTz36-ZHlEclGb9iKDboxSM3equbkmc-LY-Sg5uCUwhlo85FoyxMBm3ZbcF7hRWoRxjjcYQOs-Zgo2GV3icnhsbg1mq8SsoXbsfnM5Z79Vlb59gZBNslVevmfOztspS-ZuJvMMR_pOfjYOaO2lDl9_2566uEVwFCoo8d4SSjqDA3nPE4Tbi-g\",
+    \"nonce\": \"636727519457254775.NzIwMjNiNmItN2JkZS00NzBiLWFlMzktY2ZjYWNjYTU1N2RkNzE3MzZkZTItMWE0OS00MTFiLTgwZTUtMTAzODBmZjI3ZTky\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-17 11:32:30.965 +08:00 [Information] Creating Hybrid Flow response.
+iisexpress.exe Information: 0 : 2018-09-17 11:32:30.972 +08:00 [Information] Creating Implicit Flow response.
+2018-09-17 11:32:30.974 +08:00 [Debug] Creating access token
+2018-09-17 11:32:30.979 +08:00 [Debug] Creating JWT access token
+2018-09-17 11:32:31.018 +08:00 [Debug] Creating identity token
+iisexpress.exe Information: 0 : 2018-09-17 11:32:31.021 +08:00 [Information] Getting claims for identity token for subject: b05d3546-6ca8-4d32-b95c-77e94d705dde
+2018-09-17 11:32:31.022 +08:00 [Debug] Creating JWT identity token
+2018-09-17 11:32:31.044 +08:00 [Debug] Adding client "OSIMHybrid" to client list cookie for subject "b05d3546-6ca8-4d32-b95c-77e94d705dde"
+iisexpress.exe Information: 0 : 2018-09-17 11:32:31.063 +08:00 [Information] Posting to https://localhost:44333/
+2018-09-17 11:32:31.071 +08:00 [Debug] Using DefaultViewService to render authorization response HTML
+iisexpress.exe Information: 0 : 2018-09-18 16:40:32.169 +08:00 [Information] Start discovery request
+iisexpress.exe Information: 0 : 2018-09-18 16:40:33.794 +08:00 [Information] Start key discovery request
+iisexpress.exe Information: 0 : 2018-09-18 16:40:35.406 +08:00 [Information] Start authorize request
+iisexpress.exe Information: 0 : 2018-09-18 16:40:35.407 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-18 16:40:35.526 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"c8a8388b-bc02-4a94-9ba2-990978201ef1\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=uOdm2ss6cWURDaH6RivpOX3xZ52-p2Q_-g-nDdkZ6gSOe3pllfrr28Pe8UQXfdo_1C0qmEjvqDwyVBaq0BFKadseT4tXqLgyUfwTt_ZKL94N2PvSQecVjW-DeuXHey0aUYK8ando7lkX04BtWbJsEyz7d2MT_7jH1tGf1a5NxIty3KxAphAJHCWUIiowrH8_ViikhM-nuUoRMXFZqWYqKg\",
+  \"Nonce\": \"636728568340691309.M2Q2MDdmNzUtZjcyZC00NzkyLTlhYTEtNzFkZTlkNDAzMmRlODk3NTIwMTItODk1Ni00NmM5LWFmOTUtNGI5MjA2YzIzY2Qx\",
+  \"SessionId\": \"d189ec7b248b4937dab0add41ba9d763\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=uOdm2ss6cWURDaH6RivpOX3xZ52-p2Q_-g-nDdkZ6gSOe3pllfrr28Pe8UQXfdo_1C0qmEjvqDwyVBaq0BFKadseT4tXqLgyUfwTt_ZKL94N2PvSQecVjW-DeuXHey0aUYK8ando7lkX04BtWbJsEyz7d2MT_7jH1tGf1a5NxIty3KxAphAJHCWUIiowrH8_ViikhM-nuUoRMXFZqWYqKg\",
+    \"nonce\": \"636728568340691309.M2Q2MDdmNzUtZjcyZC00NzkyLTlhYTEtNzFkZTlkNDAzMmRlODk3NTIwMTItODk1Ni00NmM5LWFmOTUtNGI5MjA2YzIzY2Qx\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-18 16:40:35.557 +08:00 [Information] User is not active. Redirecting to login.
+iisexpress.exe Information: 0 : 2018-09-18 16:40:35.891 +08:00 [Information] End authorize request
+iisexpress.exe Information: 0 : 2018-09-18 16:40:36.202 +08:00 [Information] Redirecting to login page
+2018-09-18 16:40:37.157 +08:00 [Debug] Protecting message: "{\"ReturnUrl\":\"https://localhost:44389/identity/connect/authorize?client_id=OSIMHybrid&redirect_uri=https%3A%2F%2Flocalhost%3A44333%2F&response_mode=form_post&response_type=id_token%20code%20token&scope=openid%20profile%20roles&state=OpenIdConnect.AuthenticationProperties%3DuOdm2ss6cWURDaH6RivpOX3xZ52-p2Q_-g-nDdkZ6gSOe3pllfrr28Pe8UQXfdo_1C0qmEjvqDwyVBaq0BFKadseT4tXqLgyUfwTt_ZKL94N2PvSQecVjW-DeuXHey0aUYK8ando7lkX04BtWbJsEyz7d2MT_7jH1tGf1a5NxIty3KxAphAJHCWUIiowrH8_ViikhM-nuUoRMXFZqWYqKg&nonce=636728568340691309.M2Q2MDdmNzUtZjcyZC00NzkyLTlhYTEtNzFkZTlkNDAzMmRlODk3NTIwMTItODk1Ni00NmM5LWFmOTUtNGI5MjA2YzIzY2Qx&x-client-SKU=ID_NET451&x-client-ver=5.2.1.0\",\"ClientId\":\"OSIMHybrid\",\"AcrValues\":[],\"Created\":636728568353941309}"
+iisexpress.exe Information: 0 : 2018-09-18 16:40:37.754 +08:00 [Information] Login page requested
+2018-09-18 16:40:37.898 +08:00 [Debug] signin message passed to login: "{
+  \"ReturnUrl\": \"https://localhost:44389/identity/connect/authorize?client_id=OSIMHybrid&redirect_uri=https%3A%2F%2Flocalhost%3A44333%2F&response_mode=form_post&response_type=id_token%20code%20token&scope=openid%20profile%20roles&state=OpenIdConnect.AuthenticationProperties%3DuOdm2ss6cWURDaH6RivpOX3xZ52-p2Q_-g-nDdkZ6gSOe3pllfrr28Pe8UQXfdo_1C0qmEjvqDwyVBaq0BFKadseT4tXqLgyUfwTt_ZKL94N2PvSQecVjW-DeuXHey0aUYK8ando7lkX04BtWbJsEyz7d2MT_7jH1tGf1a5NxIty3KxAphAJHCWUIiowrH8_ViikhM-nuUoRMXFZqWYqKg&nonce=636728568340691309.M2Q2MDdmNzUtZjcyZC00NzkyLTlhYTEtNzFkZTlkNDAzMmRlODk3NTIwMTItODk1Ni00NmM5LWFmOTUtNGI5MjA2YzIzY2Qx&x-client-SKU=ID_NET451&x-client-ver=5.2.1.0\",
+  \"ClientId\": \"OSIMHybrid\",
+  \"IdP\": null,
+  \"Tenant\": null,
+  \"LoginHint\": null,
+  \"DisplayMode\": null,
+  \"UiLocales\": null,
+  \"AcrValues\": [],
+  \"Created\": 636728568353941309
+}"
+iisexpress.exe Information: 0 : 2018-09-18 16:40:37.985 +08:00 [Information] rendering login page
+iisexpress.exe Information: 0 : 2018-09-18 16:41:12.953 +08:00 [Information] Login page submitted
+iisexpress.exe Information: 0 : 2018-09-18 16:41:13.045 +08:00 [Information] Login credentials successfully validated by user service
+iisexpress.exe Information: 0 : 2018-09-18 16:41:13.149 +08:00 [Information] Calling PostAuthenticateAsync on the user service
+iisexpress.exe Information: 0 : 2018-09-18 16:41:13.154 +08:00 [Information] issuing primary signin cookie
+iisexpress.exe Information: 0 : 2018-09-18 16:41:13.228 +08:00 [Information] redirecting to: https://localhost:44389/identity/connect/authorize?client_id=OSIMHybrid&redirect_uri=https:%2F%2Flocalhost:44333%2F&response_mode=form_post&response_type=id_token code token&scope=openid profile roles&state=OpenIdConnect.AuthenticationProperties%3DuOdm2ss6cWURDaH6RivpOX3xZ52-p2Q_-g-nDdkZ6gSOe3pllfrr28Pe8UQXfdo_1C0qmEjvqDwyVBaq0BFKadseT4tXqLgyUfwTt_ZKL94N2PvSQecVjW-DeuXHey0aUYK8ando7lkX04BtWbJsEyz7d2MT_7jH1tGf1a5NxIty3KxAphAJHCWUIiowrH8_ViikhM-nuUoRMXFZqWYqKg&nonce=636728568340691309.M2Q2MDdmNzUtZjcyZC00NzkyLTlhYTEtNzFkZTlkNDAzMmRlODk3NTIwMTItODk1Ni00NmM5LWFmOTUtNGI5MjA2YzIzY2Qx&x-client-SKU=ID_NET451&x-client-ver=5.2.1.0
+iisexpress.exe Information: 0 : 2018-09-18 16:41:16.168 +08:00 [Information] Start authorize request
+iisexpress.exe Information: 0 : 2018-09-18 16:41:16.191 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-18 16:41:16.192 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705ddf\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=uOdm2ss6cWURDaH6RivpOX3xZ52-p2Q_-g-nDdkZ6gSOe3pllfrr28Pe8UQXfdo_1C0qmEjvqDwyVBaq0BFKadseT4tXqLgyUfwTt_ZKL94N2PvSQecVjW-DeuXHey0aUYK8ando7lkX04BtWbJsEyz7d2MT_7jH1tGf1a5NxIty3KxAphAJHCWUIiowrH8_ViikhM-nuUoRMXFZqWYqKg\",
+  \"Nonce\": \"636728568340691309.M2Q2MDdmNzUtZjcyZC00NzkyLTlhYTEtNzFkZTlkNDAzMmRlODk3NTIwMTItODk1Ni00NmM5LWFmOTUtNGI5MjA2YzIzY2Qx\",
+  \"SessionId\": \"774910c92210e9e47defefc8c8c0e022\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=uOdm2ss6cWURDaH6RivpOX3xZ52-p2Q_-g-nDdkZ6gSOe3pllfrr28Pe8UQXfdo_1C0qmEjvqDwyVBaq0BFKadseT4tXqLgyUfwTt_ZKL94N2PvSQecVjW-DeuXHey0aUYK8ando7lkX04BtWbJsEyz7d2MT_7jH1tGf1a5NxIty3KxAphAJHCWUIiowrH8_ViikhM-nuUoRMXFZqWYqKg\",
+    \"nonce\": \"636728568340691309.M2Q2MDdmNzUtZjcyZC00NzkyLTlhYTEtNzFkZTlkNDAzMmRlODk3NTIwMTItODk1Ni00NmM5LWFmOTUtNGI5MjA2YzIzY2Qx\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-18 16:41:16.313 +08:00 [Information] Showing consent screen
+iisexpress.exe Information: 0 : 2018-09-18 16:41:16.596 +08:00 [Information] End authorize request
+iisexpress.exe Information: 0 : 2018-09-18 16:41:19.297 +08:00 [Information] Resuming from consent, restarting validation
+iisexpress.exe Information: 0 : 2018-09-18 16:41:19.297 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-18 16:41:19.303 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705ddf\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=uOdm2ss6cWURDaH6RivpOX3xZ52-p2Q_-g-nDdkZ6gSOe3pllfrr28Pe8UQXfdo_1C0qmEjvqDwyVBaq0BFKadseT4tXqLgyUfwTt_ZKL94N2PvSQecVjW-DeuXHey0aUYK8ando7lkX04BtWbJsEyz7d2MT_7jH1tGf1a5NxIty3KxAphAJHCWUIiowrH8_ViikhM-nuUoRMXFZqWYqKg\",
+  \"Nonce\": \"636728568340691309.M2Q2MDdmNzUtZjcyZC00NzkyLTlhYTEtNzFkZTlkNDAzMmRlODk3NTIwMTItODk1Ni00NmM5LWFmOTUtNGI5MjA2YzIzY2Qx\",
+  \"SessionId\": \"774910c92210e9e47defefc8c8c0e022\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=uOdm2ss6cWURDaH6RivpOX3xZ52-p2Q_-g-nDdkZ6gSOe3pllfrr28Pe8UQXfdo_1C0qmEjvqDwyVBaq0BFKadseT4tXqLgyUfwTt_ZKL94N2PvSQecVjW-DeuXHey0aUYK8ando7lkX04BtWbJsEyz7d2MT_7jH1tGf1a5NxIty3KxAphAJHCWUIiowrH8_ViikhM-nuUoRMXFZqWYqKg\",
+    \"nonce\": \"636728568340691309.M2Q2MDdmNzUtZjcyZC00NzkyLTlhYTEtNzFkZTlkNDAzMmRlODk3NTIwMTItODk1Ni00NmM5LWFmOTUtNGI5MjA2YzIzY2Qx\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-18 16:41:19.304 +08:00 [Information] Creating Hybrid Flow response.
+iisexpress.exe Information: 0 : 2018-09-18 16:41:19.325 +08:00 [Information] Creating Implicit Flow response.
+2018-09-18 16:41:19.325 +08:00 [Debug] Creating access token
+2018-09-18 16:41:19.325 +08:00 [Debug] Creating JWT access token
+2018-09-18 16:41:22.037 +08:00 [Debug] Creating identity token
+iisexpress.exe Information: 0 : 2018-09-18 16:41:22.038 +08:00 [Information] Getting claims for identity token for subject: b05d3546-6ca8-4d32-b95c-77e94d705ddf
+2018-09-18 16:41:22.100 +08:00 [Debug] Creating JWT identity token
+2018-09-18 16:41:22.588 +08:00 [Debug] Adding client "OSIMHybrid" to client list cookie for subject "b05d3546-6ca8-4d32-b95c-77e94d705ddf"
+iisexpress.exe Information: 0 : 2018-09-18 16:41:22.589 +08:00 [Information] Posting to https://localhost:44333/
+2018-09-18 16:41:22.589 +08:00 [Debug] Using DefaultViewService to render authorization response HTML
+iisexpress.exe Information: 0 : 2018-09-18 19:10:39.854 +08:00 [Information] Start authorize request
+iisexpress.exe Information: 0 : 2018-09-18 19:10:39.859 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-18 19:10:40.039 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705ddf\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=pg5oCizNUCYNUzRK3xOdlwjRj3nYHOmJa2FmCm5guZMg_jJso1b4RK0D21ztkRofNPD9bHFlUFvlpoRwit8qhIWLIAJYRf3C797ssze1KpB7M7OT-OoF49Esiij4VoBS6AejIFLz6Zk8MVWAoRDmk2-WN1P2zM7Ht--B7SFWU828DxmdThaDms8m1x3tPiEnmqPwkJlLSz61t_7jw1KsSw\",
+  \"Nonce\": \"636728658390105829.YzRhOWJlYWYtMjRlMC00NTQ1LWJiNDEtMzE4MjgyZWZmM2JmM2I3ODlkNjAtNDJiYi00ZWM3LWE1ZmItMTRmYjVmMjJkNTdk\",
+  \"SessionId\": \"774910c92210e9e47defefc8c8c0e022\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=pg5oCizNUCYNUzRK3xOdlwjRj3nYHOmJa2FmCm5guZMg_jJso1b4RK0D21ztkRofNPD9bHFlUFvlpoRwit8qhIWLIAJYRf3C797ssze1KpB7M7OT-OoF49Esiij4VoBS6AejIFLz6Zk8MVWAoRDmk2-WN1P2zM7Ht--B7SFWU828DxmdThaDms8m1x3tPiEnmqPwkJlLSz61t_7jw1KsSw\",
+    \"nonce\": \"636728658390105829.YzRhOWJlYWYtMjRlMC00NTQ1LWJiNDEtMzE4MjgyZWZmM2JmM2I3ODlkNjAtNDJiYi00ZWM3LWE1ZmItMTRmYjVmMjJkNTdk\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-18 19:10:40.039 +08:00 [Information] Creating Hybrid Flow response.
+iisexpress.exe Information: 0 : 2018-09-18 19:10:40.040 +08:00 [Information] Creating Implicit Flow response.
+2018-09-18 19:10:40.040 +08:00 [Debug] Creating access token
+2018-09-18 19:10:40.040 +08:00 [Debug] Creating JWT access token
+2018-09-18 19:10:40.162 +08:00 [Debug] Creating identity token
+iisexpress.exe Information: 0 : 2018-09-18 19:10:40.162 +08:00 [Information] Getting claims for identity token for subject: b05d3546-6ca8-4d32-b95c-77e94d705ddf
+2018-09-18 19:10:40.163 +08:00 [Debug] Creating JWT identity token
+2018-09-18 19:10:40.175 +08:00 [Debug] Adding client "OSIMHybrid" to client list cookie for subject "b05d3546-6ca8-4d32-b95c-77e94d705ddf"
+iisexpress.exe Information: 0 : 2018-09-18 19:10:40.175 +08:00 [Information] End authorize request
+iisexpress.exe Information: 0 : 2018-09-18 19:10:40.175 +08:00 [Information] Posting to https://localhost:44333/
+2018-09-18 19:10:40.176 +08:00 [Debug] Using DefaultViewService to render authorization response HTML
+iisexpress.exe Information: 0 : 2018-09-18 19:13:16.617 +08:00 [Information] Start discovery request
+iisexpress.exe Information: 0 : 2018-09-18 19:13:16.904 +08:00 [Information] Start key discovery request
+iisexpress.exe Information: 0 : 2018-09-18 19:13:16.986 +08:00 [Information] Start authorize request
+iisexpress.exe Information: 0 : 2018-09-18 19:13:16.986 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-18 19:13:16.986 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705ddf\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=DTzhwo4I_Li-OYkG4XenO6IetWzkWy8kFnS6oVZwbQGqO5e4CXE9Yacx9pKI1dOw8HAuMXKxxWr4D2JMm0ZTkAxJFgNUJsxTZK2PsVSsfUhqK1Ue7KvBbgUYTjGtd6gjmp4hhqIKFCqxAI098va6FZdh5nZh3C25ISXYiF05RlIm10exOD4GBnZeI5rXhn-G5m3xXgA5EkdZfu4CagK7yA\",
+  \"Nonce\": \"636728659969493752.YmJkNTY4NzktYTEwYy00NTYyLTliZDItNTdhODIzODUwNGNiMTJkZjg4ZmUtNmJmZS00ZDYyLThkMTAtYzE2NzRhOGQyNTc5\",
+  \"SessionId\": \"774910c92210e9e47defefc8c8c0e022\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=DTzhwo4I_Li-OYkG4XenO6IetWzkWy8kFnS6oVZwbQGqO5e4CXE9Yacx9pKI1dOw8HAuMXKxxWr4D2JMm0ZTkAxJFgNUJsxTZK2PsVSsfUhqK1Ue7KvBbgUYTjGtd6gjmp4hhqIKFCqxAI098va6FZdh5nZh3C25ISXYiF05RlIm10exOD4GBnZeI5rXhn-G5m3xXgA5EkdZfu4CagK7yA\",
+    \"nonce\": \"636728659969493752.YmJkNTY4NzktYTEwYy00NTYyLTliZDItNTdhODIzODUwNGNiMTJkZjg4ZmUtNmJmZS00ZDYyLThkMTAtYzE2NzRhOGQyNTc5\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-18 19:13:16.987 +08:00 [Information] Creating Hybrid Flow response.
+iisexpress.exe Information: 0 : 2018-09-18 19:13:16.987 +08:00 [Information] Creating Implicit Flow response.
+2018-09-18 19:13:16.987 +08:00 [Debug] Creating access token
+2018-09-18 19:13:16.987 +08:00 [Debug] Creating JWT access token
+2018-09-18 19:13:16.994 +08:00 [Debug] Creating identity token
+iisexpress.exe Information: 0 : 2018-09-18 19:13:16.995 +08:00 [Information] Getting claims for identity token for subject: b05d3546-6ca8-4d32-b95c-77e94d705ddf
+2018-09-18 19:13:16.995 +08:00 [Debug] Creating JWT identity token
+2018-09-18 19:13:17.011 +08:00 [Debug] Adding client "OSIMHybrid" to client list cookie for subject "b05d3546-6ca8-4d32-b95c-77e94d705ddf"
+iisexpress.exe Information: 0 : 2018-09-18 19:13:17.011 +08:00 [Information] End authorize request
+iisexpress.exe Information: 0 : 2018-09-18 19:13:17.011 +08:00 [Information] Posting to https://localhost:44333/
+2018-09-18 19:13:17.011 +08:00 [Debug] Using DefaultViewService to render authorization response HTML
+iisexpress.exe Information: 0 : 2018-09-18 19:13:48.269 +08:00 [Information] Start authorize request
+iisexpress.exe Information: 0 : 2018-09-18 19:13:48.269 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-18 19:13:48.269 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705ddf\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=IvnkIRByBVrfbI3yeNnSwWYHifOiMAEPjfWu81ZN9yW98MhU34hhnJ0cpGm_BGr8QVqJWOsVsdzxbbshc6Rrb8XmtLEkF4ZzA8HtSL7Mx9sJle1WkzfPoxfpLoNmUOreM1ppSUaBG2MCXQQXNdnmq3AYLgh4OTkL7Fp7QF1UQpVMml4vj7tengpBtDnhr3WsyNN5LJhPTkv8D79tpi8qNg\",
+  \"Nonce\": \"636728660282595059.NTcyMjgwZTUtMTFjMy00ZTQxLThhOGYtZGZmMDY4MTU4Y2U4NGRkYmEzZmMtZDA3Yi00ZDFkLTkyNzgtZmZlODgwMmM1Yjk0\",
+  \"SessionId\": \"774910c92210e9e47defefc8c8c0e022\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=IvnkIRByBVrfbI3yeNnSwWYHifOiMAEPjfWu81ZN9yW98MhU34hhnJ0cpGm_BGr8QVqJWOsVsdzxbbshc6Rrb8XmtLEkF4ZzA8HtSL7Mx9sJle1WkzfPoxfpLoNmUOreM1ppSUaBG2MCXQQXNdnmq3AYLgh4OTkL7Fp7QF1UQpVMml4vj7tengpBtDnhr3WsyNN5LJhPTkv8D79tpi8qNg\",
+    \"nonce\": \"636728660282595059.NTcyMjgwZTUtMTFjMy00ZTQxLThhOGYtZGZmMDY4MTU4Y2U4NGRkYmEzZmMtZDA3Yi00ZDFkLTkyNzgtZmZlODgwMmM1Yjk0\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-18 19:13:48.269 +08:00 [Information] Creating Hybrid Flow response.
+iisexpress.exe Information: 0 : 2018-09-18 19:13:48.269 +08:00 [Information] Creating Implicit Flow response.
+2018-09-18 19:13:48.269 +08:00 [Debug] Creating access token
+2018-09-18 19:13:48.269 +08:00 [Debug] Creating JWT access token
+2018-09-18 19:13:48.279 +08:00 [Debug] Creating identity token
+iisexpress.exe Information: 0 : 2018-09-18 19:13:48.279 +08:00 [Information] Getting claims for identity token for subject: b05d3546-6ca8-4d32-b95c-77e94d705ddf
+2018-09-18 19:13:48.279 +08:00 [Debug] Creating JWT identity token
+2018-09-18 19:13:48.289 +08:00 [Debug] Adding client "OSIMHybrid" to client list cookie for subject "b05d3546-6ca8-4d32-b95c-77e94d705ddf"
+iisexpress.exe Information: 0 : 2018-09-18 19:13:48.289 +08:00 [Information] End authorize request
+iisexpress.exe Information: 0 : 2018-09-18 19:13:48.289 +08:00 [Information] Posting to https://localhost:44333/
+2018-09-18 19:13:48.289 +08:00 [Debug] Using DefaultViewService to render authorization response HTML
+iisexpress.exe Warning: 0 : 2018-09-18 19:16:29.548 +08:00 [Warning] AuthorizationCodeStore not configured - falling back to InMemory
+iisexpress.exe Warning: 0 : 2018-09-18 19:16:29.571 +08:00 [Warning] TokenHandleStore not configured - falling back to InMemory
+iisexpress.exe Warning: 0 : 2018-09-18 19:16:29.571 +08:00 [Warning] ConsentStore not configured - falling back to InMemory
+iisexpress.exe Warning: 0 : 2018-09-18 19:16:29.572 +08:00 [Warning] RefreshTokenStore not configured - falling back to InMemory
+iisexpress.exe Information: 0 : 2018-09-18 19:16:30.313 +08:00 [Information] Start discovery request
+iisexpress.exe Information: 0 : 2018-09-18 19:16:30.638 +08:00 [Information] Start key discovery request
+iisexpress.exe Information: 0 : 2018-09-18 19:16:30.895 +08:00 [Information] Start authorize request
+iisexpress.exe Information: 0 : 2018-09-18 19:16:30.900 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-18 19:16:31.062 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705ddf\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=v2gqMBIJDmHT3ZLptJ235zM-_Xe6T94OikS_QAKY0gBlwkzzEyoGBYKXo1xiGIb2avMFutUxUnUTLZn899UcmKuXu2GnVw_ZgM1g62cRSWXNk8vfwEOowKlZ3yrvz7d6U5OUxBX7ZUZHt2G6BibAP9djVyLjeaHTKfdm8EzljM95UZTlWMGFkUWkXTtKU8lgnhM-KElrmqIyrAkVKjQzyg\",
+  \"Nonce\": \"636728661906877471.YjY5ZGMwNjUtOTkzMC00Mjk4LTk3NTYtYjk3ZTJjMGE3MTkzNWI3NDc5Y2MtNDBkMS00N2Q2LWI1MjctNzJiYmM5NDVkN2Iw\",
+  \"SessionId\": \"774910c92210e9e47defefc8c8c0e022\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=v2gqMBIJDmHT3ZLptJ235zM-_Xe6T94OikS_QAKY0gBlwkzzEyoGBYKXo1xiGIb2avMFutUxUnUTLZn899UcmKuXu2GnVw_ZgM1g62cRSWXNk8vfwEOowKlZ3yrvz7d6U5OUxBX7ZUZHt2G6BibAP9djVyLjeaHTKfdm8EzljM95UZTlWMGFkUWkXTtKU8lgnhM-KElrmqIyrAkVKjQzyg\",
+    \"nonce\": \"636728661906877471.YjY5ZGMwNjUtOTkzMC00Mjk4LTk3NTYtYjk3ZTJjMGE3MTkzNWI3NDc5Y2MtNDBkMS00N2Q2LWI1MjctNzJiYmM5NDVkN2Iw\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-18 19:16:31.072 +08:00 [Information] Showing consent screen
+iisexpress.exe Information: 0 : 2018-09-18 19:16:31.084 +08:00 [Information] End authorize request
+iisexpress.exe Information: 0 : 2018-09-18 19:16:45.949 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-18 19:16:45.949 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705ddf\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=v2gqMBIJDmHT3ZLptJ235zM-_Xe6T94OikS_QAKY0gBlwkzzEyoGBYKXo1xiGIb2avMFutUxUnUTLZn899UcmKuXu2GnVw_ZgM1g62cRSWXNk8vfwEOowKlZ3yrvz7d6U5OUxBX7ZUZHt2G6BibAP9djVyLjeaHTKfdm8EzljM95UZTlWMGFkUWkXTtKU8lgnhM-KElrmqIyrAkVKjQzyg\",
+  \"Nonce\": \"636728661906877471.YjY5ZGMwNjUtOTkzMC00Mjk4LTk3NTYtYjk3ZTJjMGE3MTkzNWI3NDc5Y2MtNDBkMS00N2Q2LWI1MjctNzJiYmM5NDVkN2Iw\",
+  \"PromptMode\": \"login\",
+  \"SessionId\": \"774910c92210e9e47defefc8c8c0e022\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=v2gqMBIJDmHT3ZLptJ235zM-_Xe6T94OikS_QAKY0gBlwkzzEyoGBYKXo1xiGIb2avMFutUxUnUTLZn899UcmKuXu2GnVw_ZgM1g62cRSWXNk8vfwEOowKlZ3yrvz7d6U5OUxBX7ZUZHt2G6BibAP9djVyLjeaHTKfdm8EzljM95UZTlWMGFkUWkXTtKU8lgnhM-KElrmqIyrAkVKjQzyg\",
+    \"nonce\": \"636728661906877471.YjY5ZGMwNjUtOTkzMC00Mjk4LTk3NTYtYjk3ZTJjMGE3MTkzNWI3NDc5Y2MtNDBkMS00N2Q2LWI1MjctNzJiYmM5NDVkN2Iw\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\",
+    \"prompt\": \"login\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-18 19:16:45.950 +08:00 [Information] Redirecting to login page because of prompt=login
+iisexpress.exe Information: 0 : 2018-09-18 19:16:45.952 +08:00 [Information] Redirecting to login page
+2018-09-18 19:16:45.966 +08:00 [Debug] Protecting message: "{\"ReturnUrl\":\"https://localhost:44389/identity/connect/authorize?client_id=OSIMHybrid&redirect_uri=https%3A%2F%2Flocalhost%3A44333%2F&response_mode=form_post&response_type=id_token%20code%20token&scope=openid%20profile%20roles&state=OpenIdConnect.AuthenticationProperties%3Dv2gqMBIJDmHT3ZLptJ235zM-_Xe6T94OikS_QAKY0gBlwkzzEyoGBYKXo1xiGIb2avMFutUxUnUTLZn899UcmKuXu2GnVw_ZgM1g62cRSWXNk8vfwEOowKlZ3yrvz7d6U5OUxBX7ZUZHt2G6BibAP9djVyLjeaHTKfdm8EzljM95UZTlWMGFkUWkXTtKU8lgnhM-KElrmqIyrAkVKjQzyg&nonce=636728661906877471.YjY5ZGMwNjUtOTkzMC00Mjk4LTk3NTYtYjk3ZTJjMGE3MTkzNWI3NDc5Y2MtNDBkMS00N2Q2LWI1MjctNzJiYmM5NDVkN2Iw&x-client-SKU=ID_NET451&x-client-ver=5.2.1.0\",\"ClientId\":\"OSIMHybrid\",\"AcrValues\":[],\"Created\":636728662059352717}"
+iisexpress.exe Information: 0 : 2018-09-18 19:16:46.048 +08:00 [Information] Login page requested
+2018-09-18 19:16:46.084 +08:00 [Debug] signin message passed to login: "{
+  \"ReturnUrl\": \"https://localhost:44389/identity/connect/authorize?client_id=OSIMHybrid&redirect_uri=https%3A%2F%2Flocalhost%3A44333%2F&response_mode=form_post&response_type=id_token%20code%20token&scope=openid%20profile%20roles&state=OpenIdConnect.AuthenticationProperties%3Dv2gqMBIJDmHT3ZLptJ235zM-_Xe6T94OikS_QAKY0gBlwkzzEyoGBYKXo1xiGIb2avMFutUxUnUTLZn899UcmKuXu2GnVw_ZgM1g62cRSWXNk8vfwEOowKlZ3yrvz7d6U5OUxBX7ZUZHt2G6BibAP9djVyLjeaHTKfdm8EzljM95UZTlWMGFkUWkXTtKU8lgnhM-KElrmqIyrAkVKjQzyg&nonce=636728661906877471.YjY5ZGMwNjUtOTkzMC00Mjk4LTk3NTYtYjk3ZTJjMGE3MTkzNWI3NDc5Y2MtNDBkMS00N2Q2LWI1MjctNzJiYmM5NDVkN2Iw&x-client-SKU=ID_NET451&x-client-ver=5.2.1.0\",
+  \"ClientId\": \"OSIMHybrid\",
+  \"IdP\": null,
+  \"Tenant\": null,
+  \"LoginHint\": null,
+  \"DisplayMode\": null,
+  \"UiLocales\": null,
+  \"AcrValues\": [],
+  \"Created\": 636728662059352717
+}"
+iisexpress.exe Information: 0 : 2018-09-18 19:16:46.100 +08:00 [Information] rendering login page
+iisexpress.exe Information: 0 : 2018-09-18 19:16:53.454 +08:00 [Information] Login page submitted
+iisexpress.exe Information: 0 : 2018-09-18 19:16:53.458 +08:00 [Information] Login credentials successfully validated by user service
+iisexpress.exe Information: 0 : 2018-09-18 19:16:53.465 +08:00 [Information] Calling PostAuthenticateAsync on the user service
+iisexpress.exe Information: 0 : 2018-09-18 19:16:53.468 +08:00 [Information] issuing primary signin cookie
+iisexpress.exe Information: 0 : 2018-09-18 19:16:53.471 +08:00 [Information] redirecting to: https://localhost:44389/identity/connect/authorize?client_id=OSIMHybrid&redirect_uri=https:%2F%2Flocalhost:44333%2F&response_mode=form_post&response_type=id_token code token&scope=openid profile roles&state=OpenIdConnect.AuthenticationProperties%3Dv2gqMBIJDmHT3ZLptJ235zM-_Xe6T94OikS_QAKY0gBlwkzzEyoGBYKXo1xiGIb2avMFutUxUnUTLZn899UcmKuXu2GnVw_ZgM1g62cRSWXNk8vfwEOowKlZ3yrvz7d6U5OUxBX7ZUZHt2G6BibAP9djVyLjeaHTKfdm8EzljM95UZTlWMGFkUWkXTtKU8lgnhM-KElrmqIyrAkVKjQzyg&nonce=636728661906877471.YjY5ZGMwNjUtOTkzMC00Mjk4LTk3NTYtYjk3ZTJjMGE3MTkzNWI3NDc5Y2MtNDBkMS00N2Q2LWI1MjctNzJiYmM5NDVkN2Iw&x-client-SKU=ID_NET451&x-client-ver=5.2.1.0
+iisexpress.exe Information: 0 : 2018-09-18 19:16:53.677 +08:00 [Information] Start authorize request
+iisexpress.exe Information: 0 : 2018-09-18 19:16:53.677 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-18 19:16:53.685 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705dde\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=v2gqMBIJDmHT3ZLptJ235zM-_Xe6T94OikS_QAKY0gBlwkzzEyoGBYKXo1xiGIb2avMFutUxUnUTLZn899UcmKuXu2GnVw_ZgM1g62cRSWXNk8vfwEOowKlZ3yrvz7d6U5OUxBX7ZUZHt2G6BibAP9djVyLjeaHTKfdm8EzljM95UZTlWMGFkUWkXTtKU8lgnhM-KElrmqIyrAkVKjQzyg\",
+  \"Nonce\": \"636728661906877471.YjY5ZGMwNjUtOTkzMC00Mjk4LTk3NTYtYjk3ZTJjMGE3MTkzNWI3NDc5Y2MtNDBkMS00N2Q2LWI1MjctNzJiYmM5NDVkN2Iw\",
+  \"SessionId\": \"e8d8b6a30eb80756ade57e9c7aca69d1\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=v2gqMBIJDmHT3ZLptJ235zM-_Xe6T94OikS_QAKY0gBlwkzzEyoGBYKXo1xiGIb2avMFutUxUnUTLZn899UcmKuXu2GnVw_ZgM1g62cRSWXNk8vfwEOowKlZ3yrvz7d6U5OUxBX7ZUZHt2G6BibAP9djVyLjeaHTKfdm8EzljM95UZTlWMGFkUWkXTtKU8lgnhM-KElrmqIyrAkVKjQzyg\",
+    \"nonce\": \"636728661906877471.YjY5ZGMwNjUtOTkzMC00Mjk4LTk3NTYtYjk3ZTJjMGE3MTkzNWI3NDc5Y2MtNDBkMS00N2Q2LWI1MjctNzJiYmM5NDVkN2Iw\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-18 19:16:53.686 +08:00 [Information] Showing consent screen
+iisexpress.exe Information: 0 : 2018-09-18 19:16:53.816 +08:00 [Information] End authorize request
+iisexpress.exe Information: 0 : 2018-09-18 19:17:00.488 +08:00 [Information] Resuming from consent, restarting validation
+iisexpress.exe Information: 0 : 2018-09-18 19:17:00.488 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-18 19:17:00.488 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705dde\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=v2gqMBIJDmHT3ZLptJ235zM-_Xe6T94OikS_QAKY0gBlwkzzEyoGBYKXo1xiGIb2avMFutUxUnUTLZn899UcmKuXu2GnVw_ZgM1g62cRSWXNk8vfwEOowKlZ3yrvz7d6U5OUxBX7ZUZHt2G6BibAP9djVyLjeaHTKfdm8EzljM95UZTlWMGFkUWkXTtKU8lgnhM-KElrmqIyrAkVKjQzyg\",
+  \"Nonce\": \"636728661906877471.YjY5ZGMwNjUtOTkzMC00Mjk4LTk3NTYtYjk3ZTJjMGE3MTkzNWI3NDc5Y2MtNDBkMS00N2Q2LWI1MjctNzJiYmM5NDVkN2Iw\",
+  \"SessionId\": \"e8d8b6a30eb80756ade57e9c7aca69d1\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=v2gqMBIJDmHT3ZLptJ235zM-_Xe6T94OikS_QAKY0gBlwkzzEyoGBYKXo1xiGIb2avMFutUxUnUTLZn899UcmKuXu2GnVw_ZgM1g62cRSWXNk8vfwEOowKlZ3yrvz7d6U5OUxBX7ZUZHt2G6BibAP9djVyLjeaHTKfdm8EzljM95UZTlWMGFkUWkXTtKU8lgnhM-KElrmqIyrAkVKjQzyg\",
+    \"nonce\": \"636728661906877471.YjY5ZGMwNjUtOTkzMC00Mjk4LTk3NTYtYjk3ZTJjMGE3MTkzNWI3NDc5Y2MtNDBkMS00N2Q2LWI1MjctNzJiYmM5NDVkN2Iw\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-18 19:17:00.529 +08:00 [Information] Creating Hybrid Flow response.
+iisexpress.exe Information: 0 : 2018-09-18 19:17:00.539 +08:00 [Information] Creating Implicit Flow response.
+2018-09-18 19:17:00.542 +08:00 [Debug] Creating access token
+2018-09-18 19:17:00.555 +08:00 [Debug] Creating JWT access token
+2018-09-18 19:17:00.669 +08:00 [Debug] Creating identity token
+iisexpress.exe Information: 0 : 2018-09-18 19:17:00.672 +08:00 [Information] Getting claims for identity token for subject: b05d3546-6ca8-4d32-b95c-77e94d705dde
+2018-09-18 19:17:00.674 +08:00 [Debug] Creating JWT identity token
+2018-09-18 19:17:00.684 +08:00 [Debug] Adding client "OSIMHybrid" to client list cookie for subject "b05d3546-6ca8-4d32-b95c-77e94d705dde"
+iisexpress.exe Information: 0 : 2018-09-18 19:17:00.689 +08:00 [Information] Posting to https://localhost:44333/
+2018-09-18 19:17:00.689 +08:00 [Debug] Using DefaultViewService to render authorization response HTML
+iisexpress.exe Warning: 0 : 2018-09-18 19:46:40.784 +08:00 [Warning] AuthorizationCodeStore not configured - falling back to InMemory
+iisexpress.exe Warning: 0 : 2018-09-18 19:46:41.120 +08:00 [Warning] TokenHandleStore not configured - falling back to InMemory
+iisexpress.exe Warning: 0 : 2018-09-18 19:46:41.121 +08:00 [Warning] ConsentStore not configured - falling back to InMemory
+iisexpress.exe Warning: 0 : 2018-09-18 19:46:41.184 +08:00 [Warning] RefreshTokenStore not configured - falling back to InMemory
+iisexpress.exe Information: 0 : 2018-09-18 19:46:41.911 +08:00 [Information] Start discovery request
+iisexpress.exe Information: 0 : 2018-09-18 19:46:42.233 +08:00 [Information] Start key discovery request
+iisexpress.exe Information: 0 : 2018-09-18 19:46:42.397 +08:00 [Information] Start authorize request
+iisexpress.exe Information: 0 : 2018-09-18 19:46:42.408 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-18 19:46:42.443 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705dde\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=vLQD3d72estQjhFJt4me3qDREU_Wb4oZMrRzMZaop0809O96EkfxD4_FMTPlWIFTE1hz-fwagSnUaCC5yJSXNuaH-XraOrNIZ5LpsowLJHNMDSESBpPbS97fcYcddsBImMhNNud4iGq_knWZynTgQrFAhcZfaHGiUM7FODncmfyCAKthwqRm1HKkHIjFNoxQGGftlH1HLsAJa-VarRYsqQ\",
+  \"Nonce\": \"636728680022838886.ODMyZWUzYWYtMjNhZS00MjRmLWI0MzAtYjUzMjg1ZmI4MTM4YmY2NzIzMmItOWI5Ny00YWJmLTgwOWItZDdhMjBjMjFiZTNk\",
+  \"SessionId\": \"e8d8b6a30eb80756ade57e9c7aca69d1\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=vLQD3d72estQjhFJt4me3qDREU_Wb4oZMrRzMZaop0809O96EkfxD4_FMTPlWIFTE1hz-fwagSnUaCC5yJSXNuaH-XraOrNIZ5LpsowLJHNMDSESBpPbS97fcYcddsBImMhNNud4iGq_knWZynTgQrFAhcZfaHGiUM7FODncmfyCAKthwqRm1HKkHIjFNoxQGGftlH1HLsAJa-VarRYsqQ\",
+    \"nonce\": \"636728680022838886.ODMyZWUzYWYtMjNhZS00MjRmLWI0MzAtYjUzMjg1ZmI4MTM4YmY2NzIzMmItOWI5Ny00YWJmLTgwOWItZDdhMjBjMjFiZTNk\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-18 19:46:42.451 +08:00 [Information] Showing consent screen
+iisexpress.exe Information: 0 : 2018-09-18 19:46:42.462 +08:00 [Information] End authorize request
+iisexpress.exe Information: 0 : 2018-09-18 19:46:55.655 +08:00 [Information] Resuming from consent, restarting validation
+iisexpress.exe Information: 0 : 2018-09-18 19:46:55.656 +08:00 [Information] Start authorize request protocol validation
+iisexpress.exe Information: 0 : 2018-09-18 19:46:55.656 +08:00 [Information] "Authorize request validation success"
+ "{
+  \"ClientId\": \"OSIMHybrid\",
+  \"ClientName\": \"OSIM Hybrid\",
+  \"RedirectUri\": \"https://localhost:44333/\",
+  \"AllowedRedirectUris\": [
+    \"https://localhost:44333/\"
+  ],
+  \"SubjectId\": \"b05d3546-6ca8-4d32-b95c-77e94d705dde\",
+  \"ResponseType\": \"code id_token token\",
+  \"ResponseMode\": \"form_post\",
+  \"Flow\": \"Hybrid\",
+  \"RequestedScopes\": \"openid profile roles\",
+  \"State\": \"OpenIdConnect.AuthenticationProperties=vLQD3d72estQjhFJt4me3qDREU_Wb4oZMrRzMZaop0809O96EkfxD4_FMTPlWIFTE1hz-fwagSnUaCC5yJSXNuaH-XraOrNIZ5LpsowLJHNMDSESBpPbS97fcYcddsBImMhNNud4iGq_knWZynTgQrFAhcZfaHGiUM7FODncmfyCAKthwqRm1HKkHIjFNoxQGGftlH1HLsAJa-VarRYsqQ\",
+  \"Nonce\": \"636728680022838886.ODMyZWUzYWYtMjNhZS00MjRmLWI0MzAtYjUzMjg1ZmI4MTM4YmY2NzIzMmItOWI5Ny00YWJmLTgwOWItZDdhMjBjMjFiZTNk\",
+  \"SessionId\": \"e8d8b6a30eb80756ade57e9c7aca69d1\",
+  \"Raw\": {
+    \"client_id\": \"OSIMHybrid\",
+    \"redirect_uri\": \"https://localhost:44333/\",
+    \"response_mode\": \"form_post\",
+    \"response_type\": \"id_token code token\",
+    \"scope\": \"openid profile roles\",
+    \"state\": \"OpenIdConnect.AuthenticationProperties=vLQD3d72estQjhFJt4me3qDREU_Wb4oZMrRzMZaop0809O96EkfxD4_FMTPlWIFTE1hz-fwagSnUaCC5yJSXNuaH-XraOrNIZ5LpsowLJHNMDSESBpPbS97fcYcddsBImMhNNud4iGq_knWZynTgQrFAhcZfaHGiUM7FODncmfyCAKthwqRm1HKkHIjFNoxQGGftlH1HLsAJa-VarRYsqQ\",
+    \"nonce\": \"636728680022838886.ODMyZWUzYWYtMjNhZS00MjRmLWI0MzAtYjUzMjg1ZmI4MTM4YmY2NzIzMmItOWI5Ny00YWJmLTgwOWItZDdhMjBjMjFiZTNk\",
+    \"x-client-SKU\": \"ID_NET451\",
+    \"x-client-ver\": \"5.2.1.0\"
+  }
+}"
+iisexpress.exe Information: 0 : 2018-09-18 19:46:55.666 +08:00 [Information] Creating Hybrid Flow response.
+iisexpress.exe Information: 0 : 2018-09-18 19:46:55.674 +08:00 [Information] Creating Implicit Flow response.
+2018-09-18 19:46:55.686 +08:00 [Debug] Creating access token
+2018-09-18 19:46:55.691 +08:00 [Debug] Creating JWT access token
+2018-09-18 19:46:55.755 +08:00 [Debug] Creating identity token
+iisexpress.exe Information: 0 : 2018-09-18 19:46:55.758 +08:00 [Information] Getting claims for identity token for subject: b05d3546-6ca8-4d32-b95c-77e94d705dde
+2018-09-18 19:46:55.760 +08:00 [Debug] Creating JWT identity token
+2018-09-18 19:46:55.769 +08:00 [Debug] Adding client "OSIMHybrid" to client list cookie for subject "b05d3546-6ca8-4d32-b95c-77e94d705dde"
+iisexpress.exe Information: 0 : 2018-09-18 19:46:55.795 +08:00 [Information] Posting to https://localhost:44333/
+2018-09-18 19:46:55.795 +08:00 [Debug] Using DefaultViewService to render authorization response HTML
