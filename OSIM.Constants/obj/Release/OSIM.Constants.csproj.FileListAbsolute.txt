@@ -1,5 +1,0 @@
-D:\SourceCode\ASPMVC + TDD\OSIM\OSIM.Constants\bin\Release\OSIM.Constants.dll
-D:\SourceCode\ASPMVC + TDD\OSIM\OSIM.Constants\bin\Release\OSIM.Constants.pdb
-D:\SourceCode\ASPMVC + TDD\OSIM\OSIM.Constants\obj\Release\OSIM.Constants.csprojResolveAssemblyReference.cache
-D:\SourceCode\ASPMVC + TDD\OSIM\OSIM.Constants\obj\Release\OSIM.Constants.dll
-D:\SourceCode\ASPMVC + TDD\OSIM\OSIM.Constants\obj\Release\OSIM.Constants.pdb
