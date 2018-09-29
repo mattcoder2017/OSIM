@@ -74,7 +74,7 @@ namespace Wrox.BooksRead.Web.Repository
             try
             {
                 Product p = new Product();
-                p.Id = product.Id;
+                //p.Id = product.Id;
                 p.Name = product.Name;
                 p.Category = product.CategoryId;
                 p.CreateDate = DateTime.Parse(product.CreateDate);
@@ -139,7 +139,10 @@ namespace Wrox.BooksRead.Web.Repository
 
         public void Delete(int Id)
         {
-            Product p = _context.Products.Single<Product>(a => a.Id == Id);
+            //Product p = _context.Products.Single<Product>(a => a.Id == Id);
+            Product p = _context.Products.Find(Id);
+            if (p == null)
+                throw new NullReferenceException();
             _context.Products.Remove(p);
             //_context.SaveChanges();
         }

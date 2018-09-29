@@ -65,8 +65,8 @@ namespace Wrox.BooksRead.Web.Controllers
                 if (originalproduct.PriceIsChanged)
                 {
                     unitOfWork.NotificationRepo.buildPriceChangeNotification(originalproduct, originalproduct.ProductSubscriptions, originalproduct.ProductNotifications.GetEnumerator().Current);
-                    unitOfWork.Complete();
                 }
+                unitOfWork.Complete();
             }
             return RedirectToAction("GetAllAction", "Dummy");
         }
@@ -76,6 +76,13 @@ namespace Wrox.BooksRead.Web.Controllers
             Product product = unitOfWork.ProductRepo.GetProductById(Id);
             if (product == null) 
                return HttpNotFound();
+            ProductViewModel viewModel = new ProductViewModel(product, this.unitOfWork.CategoryRepo.AllCategories());
+            return View(viewModel);
+        }
+
+        public ActionResult Create()
+        {
+            Product product = new Product();
             ProductViewModel viewModel = new ProductViewModel(product, this.unitOfWork.CategoryRepo.AllCategories());
             return View(viewModel);
         }

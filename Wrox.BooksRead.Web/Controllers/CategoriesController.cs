@@ -11,6 +11,7 @@ using Wrox.BooksRead.Web.Models;
 
 namespace Wrox.BooksRead.Web.Controllers
 {
+    [Authorize]
     public class CategoriesController : Controller
     {
         private EFDBEntities db = new EFDBEntities();
@@ -53,7 +54,7 @@ namespace Wrox.BooksRead.Web.Controllers
             {
                 db.Categories.Add(category);
                 await db.SaveChangesAsync();
-                await RedisLib.DeleteCache("Categories");
+                //await RedisLib.DeleteCache("Categories");
                 return RedirectToAction("Index");
             }
 
@@ -87,7 +88,7 @@ namespace Wrox.BooksRead.Web.Controllers
             {
                 db.Entry(category).State = EntityState.Modified;
                 await db.SaveChangesAsync();
-                await RedisLib.DeleteCache("Categories");
+                //await RedisLib.DeleteCache("Categories");
                 return RedirectToAction("Index");
             }
             return View(category);
@@ -116,7 +117,7 @@ namespace Wrox.BooksRead.Web.Controllers
             Category category = await db.Categories.FindAsync(id);
             db.Categories.Remove(category);
             await db.SaveChangesAsync();
-            await RedisLib.DeleteCache("Categories");
+            //await RedisLib.DeleteCache("Categories");
             return RedirectToAction("Index");
         }
 

@@ -17,9 +17,11 @@ namespace Wrox.BooksRead.Web.Controllers.Api
 {
     [System.Web.Http.RoutePrefix("api/Product")]
     public class ProductController : ApiController
-    {       
-        public ProductController()
+    {
+        private IUnitOfWork uow;
+        public ProductController(IUnitOfWork uow)
         {
+            this.uow = uow;
         }
         //[HttpGet]
         [System.Web.Http.Route("get")]
@@ -36,8 +38,13 @@ namespace Wrox.BooksRead.Web.Controllers.Api
         {
             try
             {
-                UnitOfWork.ProductRepo.Delete(Id);
-                return Ok();   
+                uow.ProductRepo.Delete(Id);
+                uow.Complete();
+                return Ok();
+            }
+            catch (NullReferenceException ex)
+            {
+                return BadRequest("The product no longer exist!!");
             }
             catch (Exception ex)
             {

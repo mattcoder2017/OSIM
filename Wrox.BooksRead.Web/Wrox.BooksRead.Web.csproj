@@ -267,7 +267,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IEFDBEntities.cs" />
+    <Compile Include="Persistence\IEFDBEntities.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductNotification.cs" />
     <Compile Include="Models\ProductSubscription.cs" />
@@ -301,6 +301,7 @@
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\OSIM.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\App\dummy.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

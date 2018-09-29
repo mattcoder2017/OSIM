@@ -70,6 +70,7 @@ namespace Wrox.BooksRead.Web.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Product>().Ignore(i => i.PriceIsChanged);
+            //modelBuilder.Entity<Product>().Ignore(i => i.Id);
 
             base.OnModelCreating(modelBuilder);
         }
