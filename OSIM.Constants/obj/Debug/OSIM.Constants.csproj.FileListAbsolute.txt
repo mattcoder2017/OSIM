@@ -1,0 +1,10 @@
+D:\SourceCode\ASPMVC + TDD\OSIM\OSIM.Constants\bin\Debug\OSIM.Constants.dll
+D:\SourceCode\ASPMVC + TDD\OSIM\OSIM.Constants\bin\Debug\OSIM.Constants.pdb
+D:\SourceCode\ASPMVC + TDD\OSIM\OSIM.Constants\obj\Debug\OSIM.Constants.dll
+D:\SourceCode\ASPMVC + TDD\OSIM\OSIM.Constants\obj\Debug\OSIM.Constants.pdb
+D:\SourceCode\ASPMVC + TDD\OSIM\OSIM.Constants\obj\Debug\OSIM.Constants.csprojResolveAssemblyReference.cache
+D:\SourceCode\OSIM.Oauth\OSIM.Constants\bin\Debug\OSIM.Constants.dll
+D:\SourceCode\OSIM.Oauth\OSIM.Constants\bin\Debug\OSIM.Constants.pdb
+D:\SourceCode\OSIM.Oauth\OSIM.Constants\obj\Debug\OSIM.Constants.csprojResolveAssemblyReference.cache
+D:\SourceCode\OSIM.Oauth\OSIM.Constants\obj\Debug\OSIM.Constants.dll
+D:\SourceCode\OSIM.Oauth\OSIM.Constants\obj\Debug\OSIM.Constants.pdb
