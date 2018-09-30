@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrox.BooksRead.Web.Tests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIM.Constants", "..\OSIM.Constants\OSIM.Constants.csproj", "{98BA9931-7967-444F-8530-A8C27B5AE62A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIM.IdentityServer", "..\OSIM.IdentityServer\OSIM.IdentityServer.csproj", "{D3D4EEF0-22F4-4655-9AEC-9C8A2BF866A5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIM.WebResource", "..\OSIM.WebResource\OSIM.WebResource.csproj", "{A98A69A5-C303-49DF-A13E-7FB7D0229372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSIM.IdentityServer2", "..\OSIM.IdentityServer2\OSIM.IdentityServer2.csproj", "{3DF9E63A-137E-4450-8E5E-6506FFE13CF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +37,14 @@ Global
 		{98BA9931-7967-444F-8530-A8C27B5AE62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98BA9931-7967-444F-8530-A8C27B5AE62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98BA9931-7967-444F-8530-A8C27B5AE62A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3D4EEF0-22F4-4655-9AEC-9C8A2BF866A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3D4EEF0-22F4-4655-9AEC-9C8A2BF866A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3D4EEF0-22F4-4655-9AEC-9C8A2BF866A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3D4EEF0-22F4-4655-9AEC-9C8A2BF866A5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A98A69A5-C303-49DF-A13E-7FB7D0229372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A98A69A5-C303-49DF-A13E-7FB7D0229372}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A98A69A5-C303-49DF-A13E-7FB7D0229372}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A98A69A5-C303-49DF-A13E-7FB7D0229372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF9E63A-137E-4450-8E5E-6506FFE13CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF9E63A-137E-4450-8E5E-6506FFE13CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF9E63A-137E-4450-8E5E-6506FFE13CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF9E63A-137E-4450-8E5E-6506FFE13CF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
