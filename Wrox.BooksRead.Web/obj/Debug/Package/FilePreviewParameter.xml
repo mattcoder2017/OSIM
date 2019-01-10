@@ -1,11 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="Default Web Site" tags="IisApp">
+  <parameter name="IIS Web Application Name" description="" value="OSIM" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\SourceCode\\ASPMVC\ \+\ TDD\\OSIM\\Wrox\.BooksRead\.Web\\obj\\Debug\\Package\\PackageTmp$" />
     <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\SourceCode\\ASPMVC\ \+\ TDD\\OSIM\\Wrox\.BooksRead\.Web\\obj\\Debug\\Package\\PackageTmp$" />
-  </parameter>
-  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=PC-MYANG;Initial Catalog=EFDB;Integrated Security=True" tags="">
-    <parameterEntry kind="XmlFile" scope="D:\\SourceCode\\ASPMVC\ \+\ TDD\\OSIM\\Wrox\.BooksRead\.Web\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
   <parameter name="EFConnection-Web.config Connection String" description="" value="metadata=res://*/Default.csdl|res://*/Default.ssdl|res://*/Default.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=PC-MYANG;initial catalog=EFDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
     <parameterEntry kind="XmlFile" scope="D:\\SourceCode\\ASPMVC\ \+\ TDD\\OSIM\\Wrox\.BooksRead\.Web\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EFConnection']/@connectionString" />
@@ -15,5 +12,8 @@
   </parameter>
   <parameter name="ReadEFDBEntities-Web.config Connection String" description="" value="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=PC-MYANG;initial catalog=EFDB_TEST;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="">
     <parameterEntry kind="XmlFile" scope="D:\\SourceCode\\ASPMVC\ \+\ TDD\\OSIM\\Wrox\.BooksRead\.Web\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ReadEFDBEntities']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." value="Data Source=PC-MYANG;Initial Catalog=EFDB;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\SourceCode\\ASPMVC\ \+\ TDD\\OSIM\\Wrox\.BooksRead\.Web\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
 </parameters>

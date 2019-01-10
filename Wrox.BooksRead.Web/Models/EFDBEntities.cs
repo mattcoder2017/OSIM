@@ -1,4 +1,4 @@
-namespace Wrox.BooksRead.Web.Models
+﻿namespace Wrox.BooksRead.Web.Models
 {
     using System;
     using System.Data.Entity;
@@ -70,7 +70,6 @@ namespace Wrox.BooksRead.Web.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Product>().Ignore(i => i.PriceIsChanged);
-            //modelBuilder.Entity<Product>().Ignore(i => i.Id);
 
             base.OnModelCreating(modelBuilder);
         }

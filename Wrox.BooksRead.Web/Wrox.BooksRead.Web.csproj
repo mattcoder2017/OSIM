@@ -240,6 +240,7 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\UnityWebApiActivator.cs" />
+    <Compile Include="Controllers\Api\IpTestController.cs" />
     <Compile Include="Controllers\Api\UserNotificationController.cs" />
     <Compile Include="DTO\UserProductNoticationDTO.cs" />
     <Compile Include="Models\AspNetUser.cs" />
@@ -262,11 +263,11 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="DTO\ProductDTO.cs" />
-    <Compile Include="Models\EFDBEntities.cs" />
     <Compile Include="Extensions\ProductExtension.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\EFDBEntities.cs" />
     <Compile Include="Persistence\IEFDBEntities.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductNotification.cs" />
@@ -316,7 +317,9 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\underscore-min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -372,12 +375,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MvcDonutCache\sourceCode\mvcdonutcaching\DevTrends.MvcDonutCaching\MvcDonutCaching.csproj">
+      <Project>{854e90c7-8320-4eb6-a286-24a8ee5ebe9b}</Project>
+      <Name>MvcDonutCaching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Perf Test\Wrox.BookRead.Web.LoadTest\Wrox.BookRead.CustomCounters.Console\Wrox.BookRead.CustomCounters.Console.csproj">
+      <Project>{070be042-ea08-4f3b-b912-3b59a16f6ab0}</Project>
+      <Name>Wrox.BookRead.CustomCounters.Console</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

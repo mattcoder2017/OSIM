@@ -113,7 +113,6 @@
     <Compile Include="Repository\ProductRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NewFolder2\" />
     <Folder Include="OSIM.ExternalServices\" />
   </ItemGroup>
   <ItemGroup>

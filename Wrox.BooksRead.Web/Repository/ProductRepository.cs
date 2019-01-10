@@ -80,7 +80,8 @@ namespace Wrox.BooksRead.Web.Repository
                 p.CreateDate = DateTime.Parse(product.CreateDate);
 
                 _context.Products.Add(p);
-               // _context.SaveChanges();
+                //_context.Products.Remove(p);
+                // _context.SaveChanges();
             }
             catch
             {

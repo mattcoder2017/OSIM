@@ -286,3 +286,7 @@ D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\obj\Debug\Wrox.BooksRead.Web.
 D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\obj\Debug\Wrox.BooksRead.Web.pdb
 D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Swashbuckle.Core.dll
 D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\obj\Debug\Wrox.BooksRead.Web.csprojResolveAssemblyReference.cache
+D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Wrox.BookRead.CustomCounters.Console.exe
+D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\Wrox.BookRead.CustomCounters.Console.pdb
+D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\DevTrends.MvcDonutCaching.dll
+D:\SourceCode\ASPMVC + TDD\OSIM\Wrox.BooksRead.Web\bin\DevTrends.MvcDonutCaching.pdb

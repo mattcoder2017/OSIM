@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Wrox.BooksRead.Web.Models;
+using Wrox.BookRead.CustomCounters.Console;
 
 namespace Wrox.BooksRead.Web.Controllers
 {
@@ -55,6 +56,7 @@ namespace Wrox.BooksRead.Web.Controllers
         //
         // GET: /Account/Login
         [AllowAnonymous]
+       [OutputCache(Duration =3600000, Location = System.Web.UI.OutputCacheLocation.Server, VaryByParam ="none")]
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -75,7 +77,12 @@ namespace Wrox.BooksRead.Web.Controllers
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
+            long dt = DateTime.Now.Ticks;
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            long d =  DateTime.Now.Ticks - dt;
+            PerformanceCounterLocator.Instance(OSIMOperations.CategoryName, new string[]{ OSIMOperations.SignIn}).GetPerformanceMonitorOperation(OSIMOperations.CategoryName, OSIMOperations.SignIn).RecordOperation(d) ;
+
+
             switch (result)
             {
                 case SignInStatus.Success:

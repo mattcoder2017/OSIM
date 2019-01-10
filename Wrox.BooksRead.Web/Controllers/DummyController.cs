@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Web.Mvc;
 using Wrox.BooksRead.Web.Models;
 using Wrox.BooksRead.Web.Persistence;
@@ -62,6 +63,7 @@ namespace Wrox.BooksRead.Web.Controllers
             {
                 Product originalproduct = unitOfWork.ProductRepo.GetProductByIdWithUpdate(product.Id);
                 originalproduct.Update(product);
+                //db.Entry(originalproduct).State = EntityState.Modified;
                 if (originalproduct.PriceIsChanged)
                 {
                     unitOfWork.NotificationRepo.buildPriceChangeNotification(originalproduct, originalproduct.ProductSubscriptions, originalproduct.ProductNotifications.GetEnumerator().Current);
